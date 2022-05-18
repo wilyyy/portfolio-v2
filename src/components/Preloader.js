@@ -1,9 +1,16 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
+
 import TypewritterText from "./TypewritterText";
 
 const Preloader = () => {
    return (
-      <Container>
+      <Container
+         initial={{ opacity: 0 }}
+         animate={{ opacity: 1 }}
+         exit={{ opacity: 0 }}
+         transition={{ type: "tween", duration: 1 }}
+      >
          <Row>
             <Text color="green">william_laurel@alvarez</Text>
             <Text color="purple"> ~/: </Text>
@@ -16,7 +23,7 @@ const Preloader = () => {
 
 export default Preloader;
 
-const Container = styled.div`
+const Container = styled(motion.div)`
    width: 100%;
    height: 100%;
    background-color: #000;
