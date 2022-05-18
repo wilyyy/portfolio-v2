@@ -18,7 +18,7 @@ const AppProvider = ({ children }) => {
 
    return (
       <MyContext.Provider value={{ theme, setTheme, pageTransition, setPageTransition }}>
-         <style jsx global>
+         {/* <style jsx global>
             {`
                body {
                   background-color: ${global_theme[theme].base};
@@ -26,7 +26,7 @@ const AppProvider = ({ children }) => {
                   transition: all 0.35s linear;
                }
             `}
-         </style>
+         </style> */}
          {children}
       </MyContext.Provider>
    );

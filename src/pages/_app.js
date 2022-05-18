@@ -45,8 +45,31 @@ function MyApp({ Component, pageProps }) {
             />
          </Head>
          <Component {...pageProps} />
+         <GlobalStyle />
       </AppProvider>
    );
 }
 
 export default MyApp;
+
+const GlobalStyle = createGlobalStyle`
+   html{
+      scroll-behavior: smooth;
+   }
+
+   *{
+      margin: 0;
+      padding: 0;
+   }
+
+   body {
+      box-sizing: border-box;
+      overflow-x: hidden;
+      width: 100vw;
+      height: 100vh;
+   }
+
+   img{
+        pointer-events: none;
+    }
+`;
