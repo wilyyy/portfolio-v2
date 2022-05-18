@@ -10,7 +10,7 @@
 //    CONCESSION: "#DE7F32",
 // };
 
-export const global_theme = {
+export const globalTheme = {
    dark: {
       base: "#0D0F11",
       text: "#fff", //temporary

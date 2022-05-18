@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
-import AppProvider from "./utils/AppProvider";
-import { createGlobalStyle } from "styled-components";
+import AppProvider from "../utils/AppProvider";
 import Head from "next/head";
+import Link from "next/link";
 
 function MyApp({ Component, pageProps }) {
    return (
@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta content="website" property="og:type" />
             <meta
-               content="William Alvarez | Front End Developer based in Vancouver, Canadar"
+               content="William Alvarez | Front End Developer based in Vancouver, Canada"
                property="og:site_name"
             />
             <meta
@@ -43,33 +43,28 @@ function MyApp({ Component, pageProps }) {
                content="The craft of William Laurel Alvarez, a web and mobile developer with a passion for human centered design."
                property="og:description"
             />
+            <link
+               rel="preload"
+               href="../../public/fonts/cartograph.ttf"
+               as="font"
+               crossOrigin=""
+            />
+            <link
+               rel="preload"
+               href="../../public/fonts/consolas.ttf"
+               as="font"
+               crossOrigin=""
+            />
+            <link
+               rel="preload"
+               href="../../public/fonts/cartograph_extralight.ttf"
+               as="font"
+               crossOrigin=""
+            />
          </Head>
          <Component {...pageProps} />
-         <GlobalStyle />
       </AppProvider>
    );
 }
 
 export default MyApp;
-
-const GlobalStyle = createGlobalStyle`
-   html{
-      scroll-behavior: smooth;
-   }
-
-   *{
-      margin: 0;
-      padding: 0;
-   }
-
-   body {
-      box-sizing: border-box;
-      overflow-x: hidden;
-      width: 100vw;
-      height: 100vh;
-   }
-
-   img{
-        pointer-events: none;
-    }
-`;

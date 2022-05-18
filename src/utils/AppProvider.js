@@ -1,5 +1,5 @@
 import { useContext, createContext, useState } from "react";
-import { global_theme } from "./ThemeConfig";
+import { globalTheme } from "./ThemeConfig";
 
 const initialStates = {
    theme: "dark",
@@ -11,22 +11,22 @@ const initialStates = {
 
 const MyContext = createContext(initialStates);
 
-//default provider
 const AppProvider = ({ children }) => {
    const [theme, setTheme] = useState(initialStates.theme);
    const [pageTransition, setPageTransition] = useState(initialStates.theme);
 
    return (
       <MyContext.Provider value={{ theme, setTheme, pageTransition, setPageTransition }}>
-         {/* <style jsx global>
+         <style jsx global>
             {`
                body {
-                  background-color: ${global_theme[theme].base};
-                  color: ${global_theme[theme].text};
+                  background-color: ${globalTheme[theme].base};
+                  color: ${globalTheme[theme].text};
                   transition: all 0.35s linear;
+                  font-family: "cartograph_extralight";
                }
             `}
-         </style> */}
+         </style>
          {children}
       </MyContext.Provider>
    );
