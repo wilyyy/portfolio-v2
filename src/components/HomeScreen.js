@@ -34,6 +34,6 @@ const Home = styled(motion.div)`
 
 const Placeholder = styled.div`
    width: 100%;
-   height: 80%;
+   height: 90%;
    /* background: red; */
 `;
