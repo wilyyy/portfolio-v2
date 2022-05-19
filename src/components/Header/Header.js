@@ -1,7 +1,12 @@
 import styled from "styled-components";
-import Image from "next/image";
+import { motion } from "framer-motion";
+import { StyledIconBase } from "@styled-icons/styled-icon";
+import { Github } from "@styled-icons/bootstrap/Github";
+import { LinkedinSquare } from "@styled-icons/boxicons-logos/LinkedinSquare";
+
 import { useTheme } from "@/src/utils/AppProvider";
 import { globalTheme } from "@/src/utils/ThemeConfig";
+import { HoverZoom } from "@/src/utils/Animations";
 
 import DateTime from "./DateTime";
 
@@ -10,12 +15,34 @@ export default function Header() {
 
    return (
       <Container border={globalTheme[theme].border}>
-         <h4>willy-portfolio</h4>
-         <DateTimeCont>
-            <DateTime date />
-            <p>|</p>
-            <DateTime time />
-         </DateTimeCont>
+         <Inner>
+            <h5>willy-dev</h5>
+            <DateTimeCont>
+               <DateTime date />
+               <p>&middot;</p>
+               <DateTime time />
+            </DateTimeCont>
+            <SocialsCont color={globalTheme[theme].text}>
+               <motion.a
+                  whileHover={HoverZoom.hover}
+                  whileTap={HoverZoom.tap}
+                  transition={HoverZoom.transition}
+                  href="https://github.com/wilyyy"
+                  target="_blank"
+               >
+                  <Github />
+               </motion.a>
+               <motion.a
+                  whileHover={HoverZoom.hover}
+                  whileTap={HoverZoom.tap}
+                  transition={HoverZoom.transition}
+                  href="https://www.linkedin.com/in/william-alvarez-76b806149/"
+                  target="_blank"
+               >
+                  <LinkedinSquare />
+               </motion.a>
+            </SocialsCont>
+         </Inner>
       </Container>
    );
 }
@@ -25,16 +52,32 @@ const Container = styled.div`
    height: 7%;
    border-bottom: 1px solid ${(props) => props.border};
    display: flex;
-   justify-content: space-around;
+   justify-content: center;
+   align-items: center;
+`;
+
+const Inner = styled.div`
+   width: 97%;
+   display: flex;
+   justify-content: space-between;
    align-items: center;
 `;
 
 const DateTimeCont = styled.div`
-   width: 20%;
+   width: 16%;
    display: flex;
    justify-content: space-between;
 `;
 
 const SocialsCont = styled.div`
-   width: 10%;
+   width: 5%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   ${StyledIconBase} {
+      width: 31px;
+      height: 31px;
+      color: ${(props) => props.color};
+   }
 `;

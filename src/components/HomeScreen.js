@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 import Header from "./Header/Header";
 import LightSwitch from "./LightSwitch";
+import BackgroundPatterns from "./BackgroundPatterns";
 
 export default function HomeScreen() {
    return (
@@ -23,6 +24,7 @@ export default function HomeScreen() {
          <Placeholder>
             <LightSwitch />
          </Placeholder>
+         <BackgroundPatterns />
       </Home>
    );
 }
@@ -33,10 +35,13 @@ const Home = styled(motion.div)`
    display: flex;
    flex-direction: column;
    align-items: center;
+   position: relative;
 `;
 
 const Placeholder = styled.div`
    width: 100%;
    height: 93%;
+   position: relative;
+
    /* background: red; */
 `;

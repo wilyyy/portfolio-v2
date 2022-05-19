@@ -9,7 +9,7 @@ const DateTime = ({ date, time }) => {
       }, 1000);
    }, []);
 
-   const options = { weekday: "short", year: "numeric", month: "long", day: "numeric" };
+   const options = { year: "numeric", month: "long", day: "numeric" };
    const showDate = new Date().toLocaleDateString(undefined, options);
    return (
       <>
