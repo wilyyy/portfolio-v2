@@ -10,14 +10,13 @@ export default function LightSwitch() {
    const { theme, setTheme } = useTheme();
 
    return (
-      <Container
-         onClick={() => {
-            setTheme(theme === "dark" ? "light" : "dark");
-         }}
-      >
+      <Container>
          <motion.div
-            whileHover={{ scale: 1.3 }}
+            whileHover={{ scale: 1.2 }}
             transition={{ type: "spring", stiffness: 500 }}
+            onClick={() => {
+               setTheme(theme === "dark" ? "light" : "dark");
+            }}
          >
             <Image
                src={theme === "dark" ? lightswitch_dark : lightswitch_outline}
@@ -38,6 +37,9 @@ const Container = styled(motion.div)`
    flex-direction: column;
    justify-content: space-between;
    align-items: center;
+   position: absolute;
+   top: 2%;
+   right: 2%;
 
    user-select: none;
    -moz-user-select: none;
