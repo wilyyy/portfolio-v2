@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const DateTime = ({ date, time }) => {
+export default function DateTime({ date, time }) {
    const [currTime, setCurrTime] = useState();
 
    useEffect(() => {
@@ -26,6 +26,4 @@ const DateTime = ({ date, time }) => {
          )}
       </>
    );
-};
-
-export default DateTime;
+}

@@ -30,7 +30,7 @@ export default function Icon({ folder, notepad, gear, mail, onButtonClick }) {
                   width="70"
                   height="58"
                />
-               <p>Projects</p>
+               {/* <p>Projects</p> */}
             </Container>
          )}
 
@@ -46,7 +46,7 @@ export default function Icon({ folder, notepad, gear, mail, onButtonClick }) {
                   width="55"
                   height="73"
                />
-               <p>About</p>
+               {/* <p>About</p> */}
             </Container>
          )}
 
@@ -62,7 +62,7 @@ export default function Icon({ folder, notepad, gear, mail, onButtonClick }) {
                   width="66"
                   height="66"
                />
-               <p>Tools</p>
+               {/* <p>Tools</p> */}
             </Container>
          )}
 
@@ -78,7 +78,7 @@ export default function Icon({ folder, notepad, gear, mail, onButtonClick }) {
                   width="75"
                   height="48"
                />
-               <p>Contact</p>
+               {/* <p>Contact</p> */}
             </Container>
          )}
       </>
@@ -91,5 +91,6 @@ const Container = styled(motion.div)`
    justify-content: space-between;
    align-items: center;
    width: auto;
-   height: 118px;
+   /* height: 118px; */
+   height: auto;
 `;

@@ -37,7 +37,7 @@ const Container = styled(motion.div)`
    flex-direction: column;
    justify-content: space-between;
    align-items: center;
-   position: absolute;
+   /* position: absolute;
    top: 2%;
-   right: 2%;
+   right: 2%; */
 `;

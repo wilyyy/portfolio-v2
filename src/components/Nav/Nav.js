@@ -10,16 +10,16 @@ export default function Nav() {
    return (
       <Container border={globalTheme[theme].border}>
          <Inner>
-            <Selected border={globalTheme[theme].border}>
+            <Selected border={globalTheme[theme].border} width="1px" bstyle="solid">
                <Icon folder />
             </Selected>
-            <Selected border={globalTheme[theme].border}>
+            <Selected>
                <Icon notepad />
             </Selected>
-            <Selected border={globalTheme[theme].border}>
+            <Selected>
                <Icon gear />
             </Selected>
-            <Selected border={globalTheme[theme].border}>
+            <Selected>
                <Icon mail />
             </Selected>
          </Inner>
@@ -28,27 +28,35 @@ export default function Nav() {
 }
 
 const Container = styled.div`
-   width: 466px;
-   height: 100%;
-   border-radius: 18px;
+   width: 100%;
+   height: 436px;
    border: 1px solid ${(props) => props.border};
+   border-radius: 10px;
    display: flex;
+   flex-direction: column;
    justify-content: center;
    align-items: center;
-   background: yellow;
 `;
 
 const Inner = styled.div`
-   width: 412px;
-   height: 100%;
+   width: 100%;
+   height: 400px;
    display: flex;
-   background: pink;
+   flex-direction: column;
 `;
 
 const Selected = styled.div`
-   width: 25%;
+   width: 100%;
+   height: 100px;
    display: flex;
    justify-content: center;
    align-items: center;
-   border: 1px solid ${(props) => props.border};
+   border-top: ${(props) => props.border};
+   border-bottom: ${(props) => props.border};
+   border-top-width: ${(props) => props.width};
+   border-bottom-width: ${(props) => props.width};
+   border-left-width: 0;
+   border-right-width: 0;
+   border-style: ${(props) => props.bstyle};
+   /* border: 1px solid ${(props) => props.border}; */
 `;
