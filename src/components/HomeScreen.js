@@ -1,11 +1,15 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
+import { useTheme } from "../utils/AppProvider";
 import Header from "./Header/Header";
 import LightSwitch from "./LightSwitch";
 import BackgroundPatterns from "./BackgroundPatterns";
+import Nav from "./Nav/Nav";
 
 export default function HomeScreen() {
+   const { theme } = useTheme();
+
    return (
       <Home
          initial="pageInitial"
@@ -24,7 +28,10 @@ export default function HomeScreen() {
          <Placeholder>
             <LightSwitch />
          </Placeholder>
-         <BackgroundPatterns />
+         <Footer>
+            <Nav />
+         </Footer>
+         {theme === "dark" && <BackgroundPatterns />}
       </Home>
    );
 }
@@ -36,12 +43,22 @@ const Home = styled(motion.div)`
    flex-direction: column;
    align-items: center;
    position: relative;
+   overflow-y: hidden;
 `;
 
 const Placeholder = styled.div`
    width: 100%;
-   height: 93%;
+   height: 83%;
    position: relative;
 
    /* background: red; */
+`;
+
+const Footer = styled.div`
+   width: 100%;
+   height: 10%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: red;
 `;

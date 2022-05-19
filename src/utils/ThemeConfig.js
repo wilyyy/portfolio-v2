@@ -24,7 +24,7 @@ export const globalTheme = {
       // modalBorder: "none",
    },
    light: {
-      base: "#fff",
+      base: "#FAF8EB",
       text: "#000", //temporary
       textShadow: "none",
       border: "#000",

@@ -40,10 +40,4 @@ const Container = styled(motion.div)`
    position: absolute;
    top: 2%;
    right: 2%;
-
-   user-select: none;
-   -moz-user-select: none;
-   -khtml-user-select: none;
-   -webkit-user-select: none;
-   -o-user-select: none;
 `;
