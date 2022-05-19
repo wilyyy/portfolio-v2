@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 import Header from "./Header/Header";
+import LightSwitch from "./LightSwitch";
 
 export default function HomeScreen() {
    return (
@@ -19,7 +20,9 @@ export default function HomeScreen() {
          }}
       >
          <Header />
-         <Placeholder />
+         <Placeholder>
+            <LightSwitch />
+         </Placeholder>
       </Home>
    );
 }
@@ -34,6 +37,6 @@ const Home = styled(motion.div)`
 
 const Placeholder = styled.div`
    width: 100%;
-   height: 90%;
+   height: 93%;
    /* background: red; */
 `;
