@@ -5,18 +5,18 @@ const initialStates = {
    theme: "dark",
    setTheme: () => {},
 
-   pageTransition: false,
-   setPageTransition: () => {},
+   status: "none",
+   setStatus: () => {},
 };
 
 const MyContext = createContext(initialStates);
 
 const AppProvider = ({ children }) => {
    const [theme, setTheme] = useState(initialStates.theme);
-   const [pageTransition, setPageTransition] = useState(initialStates.theme);
+   const [status, setStatus] = useState(initialStates.status);
 
    return (
-      <MyContext.Provider value={{ theme, setTheme, pageTransition, setPageTransition }}>
+      <MyContext.Provider value={{ theme, setTheme, status, setStatus }}>
          <style jsx global>
             {`
                body {
@@ -40,8 +40,8 @@ export const useTheme = () => {
    return { theme, setTheme };
 };
 
-//if page has already been loaded, use this state to change loading transition between page
-export const usePageTransition = () => {
-   const { pageTransition, setPageTransition } = useContext(MyContext);
-   return { pageTransition, setPageTransition };
+// current apge status for opening modals
+export const useStatus = () => {
+   const { status, setStatus } = useContext(MyContext);
+   return { status, setStatus };
 };

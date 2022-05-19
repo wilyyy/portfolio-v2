@@ -6,6 +6,7 @@ import Header from "./Header/Header";
 import LightSwitch from "./LightSwitch";
 import BackgroundPatterns from "./BackgroundPatterns";
 import Nav from "./Nav/Nav";
+import ContentModal from "./ContentModals/ContentModal";
 
 export default function HomeScreen() {
    const { theme } = useTheme();
@@ -25,12 +26,21 @@ export default function HomeScreen() {
          }}
       >
          <Header />
-         <Placeholder>
-            <LightSwitch />
-         </Placeholder>
-         <Footer>
+         <Main>
+            <Column>
+               <Nav />
+            </Column>
+            <Center>
+               <ContentModal>assad</ContentModal>
+            </Center>
+            <Column right>
+               <LightSwitch />
+            </Column>
+         </Main>
+
+         {/* <Footer>
             <Nav />
-         </Footer>
+         </Footer> */}
          {theme === "dark" && <BackgroundPatterns />}
       </Home>
    );
@@ -44,21 +54,43 @@ const Home = styled(motion.div)`
    align-items: center;
    position: relative;
    overflow-y: hidden;
+   overflow-x: hidden;
 `;
 
-const Placeholder = styled.div`
+const Main = styled.div`
    width: 100%;
-   height: 83%;
+   height: 93%;
+   display: flex;
    position: relative;
-
-   /* background: red; */
 `;
 
-const Footer = styled.div`
-   width: 100%;
-   height: 10%;
+const Column = styled.div`
+   width: 7%;
+   height: 100%;
    display: flex;
    justify-content: center;
    align-items: center;
-   background: red;
+
+   ${({ right }) =>
+      right &&
+      `
+      align-items: flex-start;
+      position: relative;
+      top: 3%;
+   `}
 `;
+
+const Center = styled.div`
+   width: 86%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+`;
+
+// const Footer = styled.div`
+//    width: 100%;
+//    height: 10%;
+//    display: flex;
+//    justify-content: center;
+//    align-items: center;
+// `;
