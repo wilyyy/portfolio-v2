@@ -16,6 +16,7 @@ export const globalTheme = {
       base: "#13151A",
       text: "#fff", //temporary
       textShadow: "rgba(51, 69, 185, 0.75)",
+      border: "#2E374D",
       // modalFillValue1: "#151A1F",
       // modalFillValue2: "rgba(11, 12, 13, 0.65)",
       // modalStrokeOuter: "#2F323D",
@@ -26,6 +27,7 @@ export const globalTheme = {
       base: "#fff",
       text: "#000", //temporary
       textShadow: "none",
+      border: "#000",
       // modalFillValue1: "rgba(136, 136, 136, 0.06)",
       // modalFillValue2: "rgba(255, 255, 255, 0)",
       // modalStrokeOuter: "rgba(255, 255, 255, 0)",
