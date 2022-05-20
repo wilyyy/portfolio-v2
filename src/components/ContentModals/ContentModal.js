@@ -7,7 +7,13 @@ export default function ContentModal({ children }) {
    const { theme } = useTheme();
 
    return (
-      <Container border={globalTheme[theme].border}>
+      <Container
+         modal1_1={globalTheme[theme].modal1_1}
+         modal2_2={globalTheme[theme].modal2_2}
+         gradient2={globalTheme[theme].gradient2}
+         gradient3={globalTheme[theme].gradient3}
+         border={globalTheme[theme].border}
+      >
          <Bottom>{children}</Bottom>
       </Container>
    );
@@ -20,14 +26,14 @@ const Container = styled.div`
    border: 1px solid ${(props) => props.border};
    background: linear-gradient(
          180deg,
-         rgba(0, 0, 0, 0) 19.13%,
-         rgba(37, 43, 66, 0.2) 85.42%
+         ${(props) => props.modal1_1},
+         ${(props) => props.gradient2} 85.42%
       ),
       linear-gradient(
          90.05deg,
-         rgba(0, 0, 0, 0.36) 0%,
-         rgba(71, 83, 113, 0.18) 44.42%,
-         rgba(0, 0, 0, 0.36) 102.76%
+         ${(props) => props.gradient3} 0%,
+         ${(props) => props.modal2_2} 44.42%,
+         ${(props) => props.gradient3} 102.76%
       );
 `;
 
