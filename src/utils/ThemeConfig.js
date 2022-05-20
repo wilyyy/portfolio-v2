@@ -18,7 +18,9 @@ export const globalTheme = {
       border: "#2E374D",
 
       modal1_1: "rgba(0, 0, 0, 0) 19.13%",
-      modal2_2: "rgba(71, 83, 113, 0.18)",
+      modal1_2: "rgba(37, 43, 66, 0.2) 85.42%",
+      modal2_13: "rgba(0, 0, 0, 0.36)",
+      modal2_2: "rgba(32, 37, 50, 0.78)",
       gradient1: "rgba(0, 0, 0, 0) 29.81%",
       gradient2: "rgba(37, 43, 66, 0.2) 85.42%",
       gradient3: "rgba(0, 0, 0, 0.36)",
@@ -30,8 +32,10 @@ export const globalTheme = {
       textShadow: "none",
       border: "#000",
 
-      modal1_1: "none",
-      modal2_2: "none",
+      modal1_1: "#FAF8EB",
+      modal1_2: "#FAF8EB",
+      modal2_13: "#FAF8EB",
+      modal2_2: "#FAF8EB",
       gradient1: "none",
       gradient2: "none",
       gradient3: "none",
