@@ -5,9 +5,9 @@ import Icon from "./Nav/Icon";
 import { useStatus } from "../utils/AppProvider";
 
 export default function CenterScreen() {
-   const { setStatus } = useStatus();
+   const { status, setStatus } = useStatus();
    return (
-      <Container>
+      <Container opacity={status === "none" ? 1 : 0.2}>
          <Inner>
             <Baffle
                speed={50}
@@ -38,6 +38,7 @@ const Container = styled.div`
    justify-content: center;
    align-items: center;
    position: absolute;
+   opacity: ${(props) => props.opacity};
 `;
 
 const Inner = styled.div`
