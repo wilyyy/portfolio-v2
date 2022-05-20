@@ -12,28 +12,29 @@
 
 export const globalTheme = {
    dark: {
-      // base: "#0D0F11",
       base: "#13151A",
-      text: "#fff", //temporary
+      text: "#fff",
       textShadow: "rgba(51, 69, 185, 0.75)",
       border: "#2E374D",
-      // modalFillValue1: "#151A1F",
-      // modalFillValue2: "rgba(11, 12, 13, 0.65)",
-      // modalStrokeOuter: "#2F323D",
-      // modalStrokeInner: "rgba(196, 196, 196, 0)",
-      // modalBorder: "none",
+
+      modal1_1: "rgba(0, 0, 0, 0) 19.13%",
+      modal2_2: "rgba(71, 83, 113, 0.18)",
+      gradient1: "rgba(0, 0, 0, 0) 29.81%",
+      gradient2: "rgba(37, 43, 66, 0.2) 85.42%",
+      gradient3: "rgba(0, 0, 0, 0.36)",
+      gradient4: "rgba(71, 83, 113, 0)",
    },
    light: {
       base: "#FAF8EB",
-      text: "#000", //temporary
+      text: "#000",
       textShadow: "none",
       border: "#000",
-      // modalFillValue1: "rgba(136, 136, 136, 0.06)",
-      // modalFillValue2: "rgba(255, 255, 255, 0)",
-      // modalStrokeOuter: "rgba(255, 255, 255, 0)",
-      // modalStrokeInner: "rgba(255, 255, 255, 0)",
-      // modalBorder: "#000",
+
+      modal1_1: "none",
+      modal2_2: "none",
+      gradient1: "none",
+      gradient2: "none",
+      gradient3: "none",
+      gradient4: "none",
    },
 };
-
-//change colors l8er

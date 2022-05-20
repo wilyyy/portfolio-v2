@@ -14,7 +14,13 @@ export default function Header() {
    const { theme } = useTheme();
 
    return (
-      <Container border={globalTheme[theme].border}>
+      <Container
+         border={globalTheme[theme].border}
+         gradient1={globalTheme[theme].gradient1}
+         gradient2={globalTheme[theme].gradient2}
+         gradient3={globalTheme[theme].gradient3}
+         gradient4={globalTheme[theme].gradient4}
+      >
          <Inner>
             <h5>willy-dev</h5>
             <DateTimeCont>
@@ -56,10 +62,14 @@ const Container = styled.div`
    align-items: center;
    background: linear-gradient(
          180deg,
-         rgba(0, 0, 0, 0) 29.81%,
-         rgba(37, 43, 66, 0.2) 85.42%
+         ${(props) => props.gradient1},
+         ${(props) => props.gradient2}
       ),
-      linear-gradient(90.05deg, rgba(0, 0, 0, 0.36) 0%, rgba(71, 83, 113, 0) 102.76%);
+      linear-gradient(
+         90.05deg,
+         ${(props) => props.gradient3} 0%,
+         ${(props) => props.gradient4}
+      );
 `;
 
 const Inner = styled.div`
