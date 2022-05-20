@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-import { useTheme } from "../utils/AppProvider";
+import { useTheme, useStatus } from "../utils/AppProvider";
 import Header from "./Header/Header";
 import LightSwitch from "./LightSwitch";
 import BackgroundPatterns from "./BackgroundPatterns";
@@ -10,6 +10,7 @@ import ContentModal from "./ContentModals/ContentModal";
 
 export default function HomeScreen() {
    const { theme } = useTheme();
+   const { status } = useStatus();
 
    return (
       <Home
@@ -31,7 +32,10 @@ export default function HomeScreen() {
                <Nav />
             </Column>
             <Center>
-               <ContentModal>assad</ContentModal>
+               {status === "work" && <ContentModal>Work</ContentModal>}
+               {status === "info" && <ContentModal>About Me</ContentModal>}
+               {status === "tools" && <ContentModal>My Toolbox</ContentModal>}
+               {status === "mail" && <ContentModal>Let's talk!</ContentModal>}
             </Center>
             <Column right>
                <LightSwitch />

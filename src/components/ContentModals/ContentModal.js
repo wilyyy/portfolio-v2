@@ -1,25 +1,33 @@
 import styled from "styled-components";
+import { motion, AnimatePresence } from "framer-motion";
 
 import { useTheme } from "@/src/utils/AppProvider";
 import { globalTheme } from "@/src/utils/ThemeConfig";
+import { ModalInit } from "@/src/utils/Animations";
 
 export default function ContentModal({ children }) {
    const { theme } = useTheme();
 
    return (
-      <Container
-         modal1_1={globalTheme[theme].modal1_1}
-         modal2_2={globalTheme[theme].modal2_2}
-         gradient2={globalTheme[theme].gradient2}
-         gradient3={globalTheme[theme].gradient3}
-         border={globalTheme[theme].border}
-      >
-         <Bottom>{children}</Bottom>
-      </Container>
+      <AnimatePresence>
+         <Container
+            variants={ModalInit}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            modal1_1={globalTheme[theme].modal1_1}
+            modal2_2={globalTheme[theme].modal2_2}
+            gradient2={globalTheme[theme].gradient2}
+            gradient3={globalTheme[theme].gradient3}
+            border={globalTheme[theme].border}
+         >
+            <Bottom>{children}</Bottom>
+         </Container>
+      </AnimatePresence>
    );
 }
 
-const Container = styled.div`
+const Container = styled(motion.div)`
    width: 75%;
    height: 85%;
    border-radius: 19px;
