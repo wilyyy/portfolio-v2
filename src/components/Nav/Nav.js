@@ -36,6 +36,12 @@ const Container = styled.div`
    flex-direction: column;
    justify-content: center;
    align-items: center;
+   background: linear-gradient(
+         180deg,
+         rgba(0, 0, 0, 0) 29.81%,
+         rgba(37, 43, 66, 0.2) 85.42%
+      ),
+      linear-gradient(90.05deg, rgba(0, 0, 0, 0.36) 0%, rgba(71, 83, 113, 0) 102.76%);
 `;
 
 const Inner = styled.div`
@@ -58,5 +64,11 @@ const Selected = styled.div`
    border-left-width: 0;
    border-right-width: 0;
    border-style: ${(props) => props.bstyle};
+   background: linear-gradient(
+         180deg,
+         rgba(0, 0, 0, 0) 29.81%,
+         rgba(37, 43, 66, 0.2) 85.42%
+      ),
+      linear-gradient(90.05deg, rgba(0, 0, 0, 0.36) 0%, rgba(71, 83, 113, 0) 102.76%);
    /* border: 1px solid ${(props) => props.border}; */
 `;

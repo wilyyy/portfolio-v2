@@ -54,6 +54,12 @@ const Container = styled.div`
    display: flex;
    justify-content: center;
    align-items: center;
+   background: linear-gradient(
+         180deg,
+         rgba(0, 0, 0, 0) 29.81%,
+         rgba(37, 43, 66, 0.2) 85.42%
+      ),
+      linear-gradient(90.05deg, rgba(0, 0, 0, 0.36) 0%, rgba(71, 83, 113, 0) 102.76%);
 `;
 
 const Inner = styled.div`
