@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
-import { useTheme } from "@/src/utils/AppProvider";
+import { useTheme, useStatus } from "@/src/utils/AppProvider";
 import { globalTheme } from "@/src/utils/ThemeConfig";
 import Icon from "./Icon";
 
 export default function Nav() {
    const { theme } = useTheme();
+   const { status, setStatus } = useStatus();
 
    return (
       <Container
@@ -17,24 +18,48 @@ export default function Nav() {
       >
          <Inner>
             <Selected
-               border={globalTheme[theme].border}
-               gradient1={globalTheme[theme].gradient1}
-               gradient2={globalTheme[theme].gradient2}
-               gradient3={globalTheme[theme].gradient3}
-               gradient4={globalTheme[theme].gradient4}
-               width="1px"
-               bstyle="solid"
+               border={status === "work" ? globalTheme[theme].border : "none"}
+               gradient1={status === "work" ? globalTheme[theme].gradient1 : "none"}
+               gradient2={status === "work" ? globalTheme[theme].gradient2 : "none"}
+               gradient3={status === "work" ? globalTheme[theme].gradient3 : "none"}
+               gradient4={status === "work" ? globalTheme[theme].gradient4 : "none"}
+               width={status === "work" ? "1px" : "none"}
+               bstyle={status === "work" ? "solid" : "none"}
             >
-               <Icon folder />
+               <Icon folder onButtonClick={() => setStatus("work")} />
             </Selected>
-            <Selected>
-               <Icon notepad />
+            <Selected
+               border={status === "info" ? globalTheme[theme].border : "none"}
+               gradient1={status === "info" ? globalTheme[theme].gradient1 : "none"}
+               gradient2={status === "info" ? globalTheme[theme].gradient2 : "none"}
+               gradient3={status === "info" ? globalTheme[theme].gradient3 : "none"}
+               gradient4={status === "info" ? globalTheme[theme].gradient4 : "none"}
+               width={status === "info" ? "1px" : "none"}
+               bstyle={status === "info" ? "solid" : "none"}
+            >
+               <Icon notepad onButtonClick={() => setStatus("info")} />
             </Selected>
-            <Selected>
-               <Icon gear />
+            <Selected
+               border={status === "tools" ? globalTheme[theme].border : "none"}
+               gradient1={status === "tools" ? globalTheme[theme].gradient1 : "none"}
+               gradient2={status === "tools" ? globalTheme[theme].gradient2 : "none"}
+               gradient3={status === "tools" ? globalTheme[theme].gradient3 : "none"}
+               gradient4={status === "tools" ? globalTheme[theme].gradient4 : "none"}
+               width={status === "tools" ? "1px" : "none"}
+               bstyle={status === "tools" ? "solid" : "none"}
+            >
+               <Icon gear onButtonClick={() => setStatus("tools")} />
             </Selected>
-            <Selected>
-               <Icon mail />
+            <Selected
+               border={status === "mail" ? globalTheme[theme].border : "none"}
+               gradient1={status === "mail" ? globalTheme[theme].gradient1 : "none"}
+               gradient2={status === "mail" ? globalTheme[theme].gradient2 : "none"}
+               gradient3={status === "mail" ? globalTheme[theme].gradient3 : "none"}
+               gradient4={status === "mail" ? globalTheme[theme].gradient4 : "none"}
+               width={status === "mail" ? "1px" : "none"}
+               bstyle={status === "mail" ? "solid" : "none"}
+            >
+               <Icon mail onButtonClick={() => setStatus("mail")} />
             </Selected>
          </Inner>
       </Container>
