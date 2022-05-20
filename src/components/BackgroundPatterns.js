@@ -21,7 +21,7 @@ export default function BackgroundPatterns() {
             }}
             transition={{
                yoyo: Infinity,
-               duration: 200,
+               duration: 100,
                ease: "linear",
             }}
             className="top"
@@ -38,7 +38,7 @@ export default function BackgroundPatterns() {
             }}
             transition={{
                yoyo: Infinity,
-               duration: 300,
+               duration: 100,
                ease: "easeIn",
             }}
             className="right"
@@ -66,7 +66,7 @@ export default function BackgroundPatterns() {
    );
 }
 
-const Container = styled.div`
+const Container = styled(motion.div)`
    width: 100%;
    height: 100%;
    position: absolute;
@@ -79,7 +79,7 @@ const Container = styled.div`
 
    .right {
       position: absolute;
-      bottom: 15%;
+      bottom: 30%;
       right: 10%;
    }
 
