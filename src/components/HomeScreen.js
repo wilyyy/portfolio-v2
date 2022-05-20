@@ -7,6 +7,7 @@ import LightSwitch from "./LightSwitch";
 import BackgroundPatterns from "./BackgroundPatterns";
 import Nav from "./Nav/Nav";
 import ContentModal from "./ContentModals/ContentModal";
+import CenterScreen from "./CenterScreen";
 
 export default function HomeScreen() {
    const { theme } = useTheme();
@@ -36,6 +37,7 @@ export default function HomeScreen() {
                {status === "info" && <ContentModal>About Me</ContentModal>}
                {status === "tools" && <ContentModal>My Toolbox</ContentModal>}
                {status === "mail" && <ContentModal>Let&apos;s talk!</ContentModal>}
+               <CenterScreen />
             </Center>
             <Column right>
                <LightSwitch />
@@ -89,6 +91,7 @@ const Center = styled.div`
    display: flex;
    justify-content: center;
    align-items: center;
+   position: relative;
 `;
 
 // const Footer = styled.div`

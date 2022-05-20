@@ -16,9 +16,9 @@ export default function ContentModal({ children }) {
             animate="visible"
             exit="exit"
             modal1_1={globalTheme[theme].modal1_1}
+            modal1_2={globalTheme[theme].modal1_2}
+            modal2_13={globalTheme[theme].modal2_13}
             modal2_2={globalTheme[theme].modal2_2}
-            gradient2={globalTheme[theme].gradient2}
-            gradient3={globalTheme[theme].gradient3}
             border={globalTheme[theme].border}
          >
             <Bottom>{children}</Bottom>
@@ -35,14 +35,15 @@ const Container = styled(motion.div)`
    background: linear-gradient(
          180deg,
          ${(props) => props.modal1_1},
-         ${(props) => props.gradient2} 85.42%
+         ${(props) => props.modal1_2} 85.42%
       ),
       linear-gradient(
          90.05deg,
-         ${(props) => props.gradient3} 0%,
+         ${(props) => props.modal2_13} 0%,
          ${(props) => props.modal2_2} 44.42%,
-         ${(props) => props.gradient3} 102.76%
+         ${(props) => props.modal2_13} 102.76%
       );
+   z-index: 2;
 `;
 
 const Bottom = styled.div``;
