@@ -12,7 +12,7 @@ export default function LightSwitch() {
    return (
       <Container>
          <motion.div
-            whileHover={{ scale: 1.2 }}
+            whileHover={{ scale: 1.15 }}
             transition={{ type: "spring", stiffness: 500 }}
             onClick={() => {
                setTheme(theme === "dark" ? "light" : "dark");

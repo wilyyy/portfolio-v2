@@ -6,7 +6,6 @@ import { LinkedinSquare } from "@styled-icons/boxicons-logos/LinkedinSquare";
 
 import { useTheme } from "@/src/utils/AppProvider";
 import { globalTheme } from "@/src/utils/ThemeConfig";
-import { HoverZoom } from "@/src/utils/Animations";
 
 import DateTime from "./DateTime";
 
@@ -30,18 +29,16 @@ export default function Header() {
             </DateTimeCont>
             <SocialsCont color={globalTheme[theme].text}>
                <motion.a
-                  whileHover={HoverZoom.hover}
-                  whileTap={HoverZoom.tap}
-                  transition={HoverZoom.transition}
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ type: "spring", stiffness: 500 }}
                   href="https://github.com/wilyyy"
                   target="_blank"
                >
                   <Github />
                </motion.a>
                <motion.a
-                  whileHover={HoverZoom.hover}
-                  whileTap={HoverZoom.tap}
-                  transition={HoverZoom.transition}
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ type: "spring", stiffness: 500 }}
                   href="https://www.linkedin.com/in/william-alvarez-76b806149/"
                   target="_blank"
                >
