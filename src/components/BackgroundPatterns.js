@@ -7,21 +7,21 @@ import BlobTwo from "@/public/BlobTwo.svg";
 import BlobThree from "@/public/BlobThree.png";
 
 export default function BackgroundPatterns() {
-   const RandomScale = Math.floor(Math.random() * (1.4 - 0.9 + 1)) + 0.9;
+   const RandomScale = Math.floor(Math.random() * (1.7 - 0.9 + 1)) + 0.9;
 
    return (
       <Container>
          <motion.div
             animate={{
-               scaleY: [1, RandomScale, RandomScale + 0.5, RandomScale - 0.5, 1],
-               skew: [1, RandomScale, RandomScale + 0.5, RandomScale - 0.5, 1],
+               scaleY: [1, RandomScale, RandomScale + 0.8, RandomScale - 0.5, 1],
+               // skew: [1, RandomScale, RandomScale + 0.5, RandomScale - 0.5, 1],
                rotate: [20, -150, 360, 20],
-               y: ["0vh", "-20vh"],
-               x: ["0vh", "-40vh"],
+               y: ["0vh", "-20vh", "80vh", "70vh", "-80vh", "30vh", "0vh"],
+               x: ["0vw", "-15vw", "-12vw", "80vw", "78vw", "40vw", "0vw"],
             }}
             transition={{
                yoyo: Infinity,
-               duration: 3,
+               duration: 200,
                ease: "linear",
             }}
             className="top"
@@ -33,12 +33,12 @@ export default function BackgroundPatterns() {
                scaleY: [1, RandomScale, RandomScale + 0.5, RandomScale - 0.5, 1],
                skew: [1, RandomScale, RandomScale + 0.5, RandomScale - 0.5, 1],
                rotate: [20, -150, 360, 20],
-               // y: ["0vh", "-20vh"],
-               // x: ["0vh", "-40vh"],
+               y: ["0vh", "20vh", "-43vh", "40vh", "38vh", "-30vh"],
+               x: ["0vw", "-35vw", "-60vw", "-58vw", "-10vw", "5vw"],
             }}
             transition={{
                yoyo: Infinity,
-               duration: 3,
+               duration: 300,
                ease: "easeIn",
             }}
             className="right"
@@ -50,12 +50,12 @@ export default function BackgroundPatterns() {
                scaleY: [1, RandomScale, RandomScale + 0.5, RandomScale - 0.5, 1],
                skew: [1, RandomScale, RandomScale + 0.5, RandomScale - 0.5, 1],
                rotate: [20, -150, 360, 20],
-               // y: ["0vh", "-20vh"],
-               // x: ["0vh", "-40vh"],
+               y: ["0vh", "-75vh", "-72vh", "80vh"],
+               x: ["0vw", "35vw", "85vw", "75vw"],
             }}
             transition={{
                yoyo: Infinity,
-               duration: 3,
+               duration: 150,
                ease: "easeInOut",
             }}
             className="bottom"
