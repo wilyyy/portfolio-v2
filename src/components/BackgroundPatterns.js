@@ -71,6 +71,7 @@ const Container = styled(motion.div)`
    height: 100%;
    position: absolute;
    z-index: -200;
+   background: linear-gradient(66.04deg, #13151a 0.65%, #1a1d23 95.42%);
 
    .top {
       position: absolute;
