@@ -35,7 +35,7 @@ export default function HomeScreen() {
                {status === "work" && <ContentModal>Work</ContentModal>}
                {status === "info" && <ContentModal>About Me</ContentModal>}
                {status === "tools" && <ContentModal>My Toolbox</ContentModal>}
-               {status === "mail" && <ContentModal>Let's talk!</ContentModal>}
+               {status === "mail" && <ContentModal>Let&apos;s talk!</ContentModal>}
             </Center>
             <Column right>
                <LightSwitch />
