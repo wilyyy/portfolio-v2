@@ -25,6 +25,11 @@ export const globalTheme = {
       gradient2: "rgba(37, 43, 66, 0.2) 85.42%",
       gradient3: "rgba(0, 0, 0, 0.36)",
       gradient4: "rgba(71, 83, 113, 0)",
+
+      textInput1_1: "rgba(28, 76, 121, 0.06)",
+      textInput1_2: "rgba(255, 255, 255, 0)",
+      textInput1_3: "rgba(0, 0, 0, 0.6)",
+      textinput1_4: "rgba(0, 0, 0, 0.6)",
    },
    light: {
       base: "#FAF8EB",
@@ -40,5 +45,10 @@ export const globalTheme = {
       gradient2: "none",
       gradient3: "none",
       gradient4: "none",
+
+      textInput1_1: "#FAF8EB",
+      textInput1_2: "#FAF8EB",
+      textInput1_3: "#FAF8EB",
+      textinput1_4: "#FAF8EB",
    },
 };

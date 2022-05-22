@@ -22,7 +22,7 @@ export default function ContentModal({ children }) {
             modal2_2={globalTheme[theme].modal2_2}
             border={globalTheme[theme].border}
          >
-            <Bottom>{children}</Bottom>
+            {children}
             <motion.h2
                whileHover={{ scale: 1.2 }}
                transition={{ type: "spring", stiffness: 500 }}
@@ -38,7 +38,10 @@ export default function ContentModal({ children }) {
 
 const Container = styled(motion.div)`
    width: 80%;
-   height: 87%;
+   height: 90%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
    border-radius: 19px;
    border: 1px solid ${(props) => props.border};
    background: linear-gradient(
@@ -67,5 +70,3 @@ const Container = styled(motion.div)`
       -o-user-select: none;
    }
 `;
-
-const Bottom = styled.div``;

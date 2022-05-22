@@ -7,6 +7,7 @@ import LightSwitch from "./LightSwitch";
 import BackgroundPatterns from "./BackgroundPatterns";
 import Nav from "./Nav/Nav";
 import ContentModal from "./ContentModals/ContentModal";
+import Contact from "./Contact/Contact";
 import CenterScreen from "./CenterScreen";
 
 export default function HomeScreen() {
@@ -36,7 +37,7 @@ export default function HomeScreen() {
                {status === "work" && <ContentModal>Work</ContentModal>}
                {status === "info" && <ContentModal>About Me</ContentModal>}
                {status === "tools" && <ContentModal>My Toolbox</ContentModal>}
-               {status === "mail" && <ContentModal>Let&apos;s talk!</ContentModal>}
+               {status === "mail" && <Contact />}
                <CenterScreen />
             </Center>
             <Column right>
