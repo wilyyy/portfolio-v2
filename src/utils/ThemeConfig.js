@@ -15,7 +15,7 @@ export const globalTheme = {
       base: "#13151A",
       text: "#fff",
       textShadow: "rgba(51, 69, 185, 0.75)",
-      border: "#2E374D",
+      border: "#404F73",
 
       modal1_1: "rgba(0, 0, 0, 0) 19.13%",
       modal1_2: "rgba(37, 43, 66, 0.2) 85.42%",
