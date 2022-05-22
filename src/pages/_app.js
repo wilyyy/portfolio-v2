@@ -1,9 +1,14 @@
 import "@/styles/globals.css";
 import AppProvider from "../utils/AppProvider";
 import Head from "next/head";
+import { createGlobalStyle } from "styled-components";
+import { useTheme } from "@/src/utils/AppProvider";
+import { globalTheme } from "@/src/utils/ThemeConfig";
 import Link from "next/link";
 
 function MyApp({ Component, pageProps }) {
+   const { theme } = useTheme();
+
    return (
       <AppProvider>
          <Head>
@@ -62,9 +67,28 @@ function MyApp({ Component, pageProps }) {
                crossOrigin=""
             />
          </Head>
+         <GlobalStyle />
          <Component {...pageProps} />
       </AppProvider>
    );
 }
 
 export default MyApp;
+
+const GlobalStyle = createGlobalStyle`
+   ::-webkit-scrollbar {
+      width: 15px;
+      background: none;
+   }
+
+   ::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.53);
+      border-radius: 16px;
+      border: 1px solid #2E374D;
+   }
+
+   ::-webkit-scrollbar-thumb:hover {
+      background: rgba(0, 0, 0, 0.3);
+
+   }
+`;
