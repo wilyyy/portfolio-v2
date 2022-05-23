@@ -7,6 +7,7 @@ import LightSwitch from "./LightSwitch";
 import BackgroundPatterns from "./BackgroundPatterns";
 import Nav from "./Nav/Nav";
 import ContentModal from "./ContentModals/ContentModal";
+import Work from "./Work/Work";
 import Contact from "./Contact/Contact";
 import Tools from "./Tools/Tools";
 import About from "./About/About";
@@ -36,7 +37,7 @@ export default function HomeScreen() {
                <Nav />
             </Column>
             <Center>
-               {status === "work" && <ContentModal>Work</ContentModal>}
+               {status === "work" && <Work />}
                {status === "info" && <About />}
                {status === "tools" && <Tools />}
                {status === "mail" && <Contact />}
