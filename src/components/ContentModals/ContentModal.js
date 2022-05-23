@@ -5,13 +5,14 @@ import { useTheme, useStatus } from "@/src/utils/AppProvider";
 import { globalTheme } from "@/src/utils/ThemeConfig";
 import { ModalInit } from "@/src/utils/Animations";
 
-export default function ContentModal({ children }) {
+export default function ContentModal({ children, flexDex = "column" }) {
    const { theme } = useTheme();
    const { status, setStatus } = useStatus();
 
    return (
       <AnimatePresence>
          <Container
+            flexDex={flexDex}
             variants={ModalInit}
             initial="hidden"
             animate="visible"
@@ -40,7 +41,7 @@ const Container = styled(motion.div)`
    width: 80%;
    height: 90%;
    display: flex;
-   flex-direction: column;
+   flex-direction: ${(props) => props.flexDex};
    justify-content: space-between;
    border-radius: 19px;
    border: 1px solid ${(props) => props.border};
