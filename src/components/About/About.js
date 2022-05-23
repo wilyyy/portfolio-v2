@@ -54,17 +54,17 @@ export default function About() {
                         I&apos;m a developer and designer hybrid based in Vancouver, BC.
                         With my creations, I have the most fun when I can let my
                         imagination run wild and limit test unconventional ideas side by
-                        side with current conventional syntheses and iterate this process
+                        side with current conventional syntheses then iterate this process
                         until an ideal product is created.
                      </p>
                      <p>
                         Besides that, I enjoy dystopian or psychological novels,
                         documentaries about random topics, gaming and esports. Consumed by
-                        lifelong wanderlust, I love to travel and explore the world and
+                        lifelong wanderlust, I love to travel and explore the world to
                         broaden my horizons.
                      </p>
                   </div>
-                  <div className="pictureGoHere"></div>
+                  <div className="pictureGoHere"> pic of me coming soon c:</div>
                </Bio>
                <Spacer bg={globalTheme[theme].border}>
                   <div className="divider" />
