@@ -1,7 +1,0 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
-
-import { useTheme } from "@/src/utils/AppProvider";
-import { globalTheme } from "@/src/utils/ThemeConfig";
-
-export default function InnerLayout() {}

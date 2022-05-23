@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { useRef } from "react";
 
 import { useTheme } from "@/src/utils/AppProvider";
 import { globalTheme } from "@/src/utils/ThemeConfig";
@@ -14,11 +16,31 @@ export default function About() {
                <h2 className="title">My Story</h2>
             </Top>
             <Bottom>
-               <p>asdasdasdas</p>
-               <p>asdasdasdas</p>
-               <p>asdasdasdas</p>
-               <p>asdasdasdas</p>
-               <p>asdasdasdas</p>
+               <motion.h4
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 500 }}
+                  href="#about-me"
+               >
+                  About Me
+               </motion.h4>
+               <motion.h4
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 500 }}
+               >
+                  Experience
+               </motion.h4>
+               <motion.h4
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 500 }}
+               >
+                  Education
+               </motion.h4>
+               <motion.h4
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 500 }}
+               >
+                  Aspirations
+               </motion.h4>
             </Bottom>
          </Left>
          <Right>
@@ -26,19 +48,20 @@ export default function About() {
                <h2 className="title">Hiya, I&apos;m William!</h2>
             </Top>
             <Bottom>
-               <Bio>
+               <Bio id="about-me">
                   <div className="text">
                      <p>
                         I&apos;m a developer and designer hybrid based in Vancouver, BC.
-                        Having built a variety of web / mobile applications with several
-                        interdisciplinary teams, I am currently seeking a career in Front
-                        End Development.
+                        With my creations, I have the most fun when I can let my
+                        imagination run wild and limit test unconventional ideas side by
+                        side with current conventional syntheses and iterate this process
+                        until an ideal product is created.
                      </p>
                      <p>
                         Besides that, I enjoy dystopian or psychological novels,
-                        documentaries about random topics and esports. Consumed by
-                        lifelong wanderlust, I&apos;m hoping to travel and explore the
-                        world to broaden my horizons.
+                        documentaries about random topics, gaming and esports. Consumed by
+                        lifelong wanderlust, I love to travel and explore the world and
+                        broaden my horizons.
                      </p>
                   </div>
                   <div className="pictureGoHere"></div>
@@ -73,6 +96,37 @@ export default function About() {
                      <p>September 2016 - January 2018</p>
                   </div>
                </Credentials>
+               <Spacer bg={globalTheme[theme].border}>
+                  <div className="divider" />
+               </Spacer>
+               <Credentials asp>
+                  <h2>Aspirations</h2>
+                  <div>
+                     <p>
+                        With aspirations of becoming a Full Stack Developer / Engineer in
+                        the future, here are some technologies I want to explore in 2022
+                        and onward:
+                     </p>
+                     <ul>
+                        <li>Further mastery of Express and MongoDB</li>
+                        <li>Redux</li>
+                        <li>D3.js</li>
+                        <li>PostgreSQL</li>
+                        <li>Prisma</li>
+                        <li>Unity & VR/AR tech</li>
+                        <li>Python into Flask or Django</li>
+                        <li>GO</li>
+                        <li>Docker</li>
+                        <li>Kubernetes</li>
+                        <li>Amazon Web Services</li>
+                        <li>Angular</li>
+                     </ul>
+                  </div>
+                  <p>
+                     I am also currently reading IDEO&apos;s Human Centered Design Toolkit
+                     to strengthen my design instincts and fundamentals.
+                  </p>
+               </Credentials>
             </Bottom>
          </Right>
       </ContentModal>
@@ -89,6 +143,7 @@ const Right = styled.div`
    width: 75%;
    height: 100%;
    overflow-y: scroll;
+   padding-bottom: 4%;
 `;
 
 const Top = styled.div`
@@ -112,6 +167,7 @@ const Bottom = styled.div`
 
 const Bio = styled.div`
    width: 90%;
+   height: 300px;
    display: flex;
    justify-content: space-between;
 
@@ -162,5 +218,11 @@ const Credentials = styled.div`
       school &&
       `
         height: 206px;
+   `}
+
+   ${({ asp }) =>
+      asp &&
+      `
+        height: 466px;
    `}
 `;
