@@ -37,16 +37,43 @@ export default function About() {
                      <p>
                         Besides that, I enjoy dystopian or psychological novels,
                         documentaries about random topics and esports. Consumed by
-                        lifelong wanderlust, I'm hoping to travel and explore the world to
-                        broaden my horizons.
+                        lifelong wanderlust, I&apos;m hoping to travel and explore the
+                        world to broaden my horizons.
                      </p>
                   </div>
                   <div className="pictureGoHere"></div>
                </Bio>
+               <Spacer bg={globalTheme[theme].border}>
+                  <div className="divider" />
+               </Spacer>
+               <Credentials>
+                  <h2>Experience</h2>
+                  <div>
+                     <p>
+                        <strong>Frontend Developer Intern</strong> @ ScopeMedia
+                     </p>
+                     <p>March 2022 - May 2022</p>
+                  </div>
+               </Credentials>
+               <Spacer bg={globalTheme[theme].border}>
+                  <div className="divider" />
+               </Spacer>
+               <Credentials school>
+                  <h2>Education</h2>
+                  <div>
+                     <p>
+                        <strong>Digital Design & Development</strong> @ BCIT
+                     </p>
+                     <p>September 2020 - June 2022</p>
+                  </div>
+                  <div>
+                     <p>
+                        <strong>Computer Science</strong> @ Langara College
+                     </p>
+                     <p>September 2016 - January 2018</p>
+                  </div>
+               </Credentials>
             </Bottom>
-            <Spacer bg={globalTheme[theme].border}>
-               <div className="divider" />
-            </Spacer>
          </Right>
       </ContentModal>
    );
@@ -106,16 +133,34 @@ const Bio = styled.div`
 
 const Spacer = styled.div`
    width: 100%;
-   height: 85px;
+   height: 60px;
    display: flex;
    justify-content: center;
    align-items: center;
 
    .divider {
-      width: 80%;
+      width: 90%;
       height: 1px;
       background: ${(props) => props.bg};
+      position: relative;
+      top: 10px;
    }
 `;
 
-const Education = styled.div``;
+const Credentials = styled.div`
+   width: 90%;
+   height: 136px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+
+   p {
+      margin: 0;
+   }
+
+   ${({ school }) =>
+      school &&
+      `
+        height: 206px;
+   `}
+`;
