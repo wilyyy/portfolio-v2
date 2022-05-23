@@ -7,7 +7,7 @@ import { useStatus } from "../utils/AppProvider";
 export default function CenterScreen() {
    const { status, setStatus } = useStatus();
    return (
-      <Container opacity={status === "none" ? 1 : 0.2}>
+      <Container opacity={status === "none" ? 1 : 0.1}>
          <Inner>
             <Baffle
                speed={50}

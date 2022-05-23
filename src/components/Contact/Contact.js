@@ -85,7 +85,7 @@ const Top = styled.div`
 
    .title {
       position: relative;
-      left: 4%;
+      left: 40px;
    }
 `;
 
@@ -142,7 +142,7 @@ const Submit = styled(motion.input)`
    height: 64px;
    background: ${(props) => props.bg};
    border: 1px solid ${(props) => props.border};
-   font-size: 24px;
+   font-size: 20px;
    color: ${(props) => props.text};
    border-radius: 16px;
    text-shadow: 0px 0px 10px ${(props) => props.textShadow};

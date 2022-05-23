@@ -25,7 +25,7 @@ const Top = styled.div`
 
    .title {
       position: relative;
-      left: 4%;
+      left: 40px;
    }
 `;
 
