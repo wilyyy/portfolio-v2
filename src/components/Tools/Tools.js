@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useTheme } from "@/src/utils/AppProvider";
 import { globalTheme } from "@/src/utils/ThemeConfig";
 import ContentModal from "@/src/components/ContentModals/ContentModal";
+import { ToolData } from "@/src/components/Tools/ToolData";
 import ToolsInfo from "./ToolsInfo";
 
 export default function Tools() {
@@ -25,7 +26,14 @@ export default function Tools() {
             />
          </Top>
          <Bottom border={globalTheme[theme].border}>
-            <ToolsInfo title="Development"></ToolsInfo>
+            <ToolsInfo title="Development">
+               {ToolData?.map((el, index) => (
+                  <IconCont key={index}>
+                     {/* {el.icon} */}
+                     <p>{el.name}</p>
+                  </IconCont>
+               ))}
+            </ToolsInfo>
             <ToolsInfo title="Design"></ToolsInfo>
             <ToolsInfo title="Agile"></ToolsInfo>
          </Bottom>
@@ -74,4 +82,13 @@ const Input = styled.input`
    position: absolute;
    right: 7%;
    top: 4.5%;
+`;
+
+const IconCont = styled.div`
+   width: auto;
+   height: 80px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
 `;

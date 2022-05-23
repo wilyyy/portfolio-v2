@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 import { useTheme } from "@/src/utils/AppProvider";
 import { globalTheme } from "@/src/utils/ThemeConfig";
+import { StyledIconBase } from "@styled-icons/styled-icon";
+import { ToolData } from "./ToolData";
 
 export default function ToolsInfo({ title, children }) {
    const { theme } = useTheme();
@@ -9,7 +11,10 @@ export default function ToolsInfo({ title, children }) {
    return (
       <Container>
          <h3>{title}</h3>
-         <Collection border={globalTheme[theme].border}></Collection>
+         <Collection
+            border={globalTheme[theme].border}
+            color={globalTheme[theme].text}
+         ></Collection>
       </Container>
    );
 }
@@ -20,6 +25,10 @@ const Container = styled.div`
    display: flex;
    flex-direction: column;
    justify-content: space-between;
+
+   ${StyledIconBase} {
+      color: ${(props) => props.color};
+   }
 `;
 
 const Collection = styled.div`

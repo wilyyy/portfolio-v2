@@ -54,8 +54,8 @@ export default function About() {
                         I&apos;m a developer and designer hybrid based in Vancouver, BC.
                         With my creations, I have the most fun when I can let my
                         imagination run wild and limit test unconventional ideas side by
-                        side with current conventional syntheses then iterate this process
-                        until an ideal product is created.
+                        side with current conventional processes, repeating this until an
+                        ideal product is created.
                      </p>
                      <p>
                         Besides that, I enjoy dystopian or psychological novels,
