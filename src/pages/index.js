@@ -8,11 +8,11 @@ import { useTheme } from "../utils/AppProvider";
 import { globalTheme } from "../utils/ThemeConfig";
 
 export default function Home() {
-   const [loading, setLoading] = useState(true);
+   const [loading, setLoading] = useState(false);
    const { theme } = useTheme();
 
    useEffect(() => {
-      setTimeout(() => setLoading(false), 4500); //switch to 3000 in final
+      setTimeout(() => setLoading(true), 4500); //switch to 3000 in final
    }, []);
 
    return (
