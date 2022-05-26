@@ -5,7 +5,7 @@ export const WorkData = [
       role: "Frontend Developer",
       bio: "A key project I worked on my internship with ScopeMedia. Under mentorship from ScopeMedia's staff, I had the pleasure of working with a talented intern team of designers and developers to create this landing page for ScopeX Labs. With this project, I learned how to work with Typescript and learned to integrate digital marketing tools such as Mailchimp and Google Analytics.",
       tools: "React.js, Typescript, Mailchimp, Google Analytics",
-      link: "https://scout-delta.vercel.app/",
+      link: "https://labs.scopex.ai/",
    },
    {
       status: "cplus",
@@ -13,7 +13,7 @@ export const WorkData = [
       role: "Fullstack Developer",
       bio: "asdasdasdadad",
       tools: "React Native / Expo, Firebase, PHP, MySQL",
-      link: "https://scout-delta.vercel.app/",
+      link: "https://github.com/wilyyy/CompassPlus",
    },
    {
       status: "scout",
@@ -29,7 +29,7 @@ export const WorkData = [
       role: "Developer",
       bio: "asdasdasdadad",
       tools: "React Native / Expo, Firebase, PHP, MySQL",
-      link: "https://scout-delta.vercel.app/",
+      link: "https://vigilant.vercel.app/",
    },
    {
       status: "steady",
@@ -37,7 +37,7 @@ export const WorkData = [
       role: "Developer",
       bio: "asdasdasdadad",
       tools: "React Native / Expo, Firebase, PHP, MySQL",
-      link: "https://scout-delta.vercel.app/",
+      link: "https://steadyofficial.vercel.app/",
    },
    {
       status: "townsquare",
@@ -45,6 +45,6 @@ export const WorkData = [
       role: "UI/UX Designer",
       bio: "asdasdasdadad",
       tools: "Figma, Illustrator, Photoshop, After Effects",
-      link: "https://scout-delta.vercel.app/",
+      link: "https://www.figma.com/proto/UjvWL8KjrI3wSLBgrpSFMy/IDSP---TownSquare?node-id=135%3A5&starting-point-node-id=120%3A2&scaling=contain",
    },
 ];
