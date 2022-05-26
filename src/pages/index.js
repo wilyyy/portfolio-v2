@@ -12,7 +12,7 @@ export default function Home() {
    const { theme } = useTheme();
 
    useEffect(() => {
-      setTimeout(() => setLoading(true), 4500); //switch to 3000 in final
+      setTimeout(() => setLoading(false), 4500); //switch to 3000 in final
    }, []);
 
    return (
