@@ -1,11 +1,17 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
-import { useTheme } from "@/src/utils/AppProvider";
+import { useTheme, useProjStatus } from "@/src/utils/AppProvider";
 import { globalTheme } from "@/src/utils/ThemeConfig";
 import ContentModal from "@/src/components/ContentModals/ContentModal";
+import { WorkData } from "@/src/components/Work/WorkData";
+import WorkDetails from "./WorkDetails";
 
 export default function Work() {
    const { theme } = useTheme();
+   const { projStatus, setProjStatus } = useProjStatus();
+   // const [current, setCurrent] = useState();
 
    return (
       <ContentModal flexDex="row">
@@ -14,20 +20,32 @@ export default function Work() {
                <h2 className="title">My Work</h2>
             </Top>
             <Bottom>
-               <h3>ScopeX Labs</h3>
-               <h3>CompassPlus</h3>
-               <h3>Scout</h3>
-               <h3>Vigilant</h3>
-               <h3>Steady</h3>
-               <h3>TownSquare</h3>
+               {WorkData.map((el, index) => (
+                  <motion.h3
+                     whileHover={{ scale: 1.1 }}
+                     transition={{ type: "spring", stiffness: 500 }}
+                     key={index}
+                     onClick={() => setProjStatus(el.status)}
+                  >
+                     {el.name}
+                  </motion.h3>
+               ))}
             </Bottom>
          </Left>
-         <Right>
+         {WorkData.filter((el) => {
+            if (el.status === projStatus) return true;
+         })
+            .slice(0, 1)
+            .map((el, index) => (
+               <WorkDetails key={index} data={el} />
+            ))}
+
+         {/* <Right>
             <Top>
                <h2 className="title">My Work</h2>
             </Top>
             <Bottom></Bottom>
-         </Right>
+         </Right> */}
       </ContentModal>
    );
 }
