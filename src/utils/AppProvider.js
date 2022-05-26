@@ -7,6 +7,9 @@ const initialStates = {
 
    status: "none",
    setStatus: () => {},
+
+   projStatus: "scope",
+   setProjStatus: () => {},
 };
 
 const MyContext = createContext(initialStates);
@@ -14,9 +17,12 @@ const MyContext = createContext(initialStates);
 const AppProvider = ({ children }) => {
    const [theme, setTheme] = useState(initialStates.theme);
    const [status, setStatus] = useState(initialStates.status);
+   const [projStatus, setProjStatus] = useState(initialStates.projStatus);
 
    return (
-      <MyContext.Provider value={{ theme, setTheme, status, setStatus }}>
+      <MyContext.Provider
+         value={{ theme, setTheme, status, setStatus, projStatus, setProjStatus }}
+      >
          <style jsx global>
             {`
                body {
@@ -44,4 +50,9 @@ export const useTheme = () => {
 export const useStatus = () => {
    const { status, setStatus } = useContext(MyContext);
    return { status, setStatus };
+};
+
+export const useProjStatus = () => {
+   const { projStatus, setProjStatus } = useContext(MyContext);
+   return { projStatus, setProjStatus };
 };

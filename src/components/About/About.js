@@ -16,31 +16,31 @@ export default function About() {
                <h2 className="title">My Story</h2>
             </Top>
             <Bottom>
-               <motion.h4
+               <motion.h3
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 500 }}
                   href="#about-me"
                >
                   About Me
-               </motion.h4>
-               <motion.h4
+               </motion.h3>
+               <motion.h3
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 500 }}
                >
                   Experience
-               </motion.h4>
-               <motion.h4
+               </motion.h3>
+               <motion.h3
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 500 }}
                >
                   Education
-               </motion.h4>
-               <motion.h4
+               </motion.h3>
+               <motion.h3
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 500 }}
                >
                   Aspirations
-               </motion.h4>
+               </motion.h3>
             </Bottom>
          </Left>
          <Right>
