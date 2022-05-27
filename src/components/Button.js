@@ -28,7 +28,7 @@ export default function Button({ src, text = "Button" }) {
 }
 
 const Container = styled(motion.a)`
-   width: 40%;
+   width: 100%;
    font-weight: 600;
    display: flex;
    justify-content: center;
