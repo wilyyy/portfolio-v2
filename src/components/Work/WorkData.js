@@ -6,8 +6,8 @@ export const WorkData = [
       bio: (
          <p>
             A key project I worked on my internship with ScopeMedia. Under mentorship from
-            ScopeMedia's staff, I had the pleasure of working with a talented intern team
-            of designers and developers to create this landing page for ScopeX Labs.
+            ScopeMedia&apos;s staff, I had the pleasure of working with a talented intern
+            team of designers and developers to create this landing page for ScopeX Labs.
             During the course of this project I not only learned industry standard coding
             practices but I got to learn about practices from all kind of disciplines,
             notably product design and digital marketing. While the codebase is
@@ -24,13 +24,13 @@ export const WorkData = [
       bio: (
          <>
             <p>
-               An all-in-one native mobile application for Translink's Compass Card
+               An all-in-one native mobile application for Translink&apos;s Compass Card
                system.
             </p>
             <p>
-               This project was an interdisciplinary project created for BCIT's Digital
-               Design & Development program by a team of six and the final product was
-               presented to 200 people including students, faculty and industry
+               This project was an interdisciplinary project created for BCIT&apos;s
+               Digital Design & Development program by a team of six and the final product
+               was presented to 200 people including students, faculty and industry
                professionals
             </p>
          </>
@@ -53,9 +53,9 @@ export const WorkData = [
       bio: (
          <p>
             Coming back from winter break, I worked with a team of 4 to create an
-            application in one week for the Web Development 4 class at BCIT's D3 Program.
-            The premise of this application is to theorycraft solutions to the increasing
-            levels of crime in the Vancouver area during the pandemic.
+            application in one week for the Web Development 4 class at BCIT&apos;s D3
+            Program. The premise of this application is to theorycraft solutions to the
+            increasing levels of crime in the Vancouver area during the pandemic.
          </p>
       ),
       tools: "React with Next.js",
