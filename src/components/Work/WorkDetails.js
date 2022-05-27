@@ -18,11 +18,13 @@ export default function WorkDetails({ data }) {
             <p>
                <b>Role:</b> {data.role}
             </p>
-            <p>{data.bio}</p>
+            <div>{data.bio}</div>
             <p>
                <b>Tools used:</b> {data.tools}
             </p>
-            <Button text="View Project" src={data.link} />
+            <div className="center">
+               <Button text="View Project" src={data.link} />
+            </div>
          </Bottom>
       </Container>
    );
@@ -37,6 +39,11 @@ const Container = styled.div`
    flex-direction: column;
    align-items: center;
    position: relative;
+
+   .center {
+      align-self: center;
+      width: 40%;
+   }
 `;
 
 const Top = styled.div`
