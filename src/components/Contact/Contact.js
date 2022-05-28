@@ -15,6 +15,10 @@ export default function Contact() {
             <h2 className="title">Contact Me</h2>
          </Top>
          <Bottom>
+            <p>
+               Contact form is currently not functioning, please email me at
+               williamlaurelalvarez@gmail.com instead
+            </p>
             <Input
                type="text"
                placeholder="Full Name"

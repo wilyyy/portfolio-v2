@@ -16,7 +16,7 @@ export default function Tools() {
             <h2 className="title">My Toolbox</h2>
             <Input
                type="text"
-               placeholder="Search..."
+               placeholder="Search my toolbox..."
                border={globalTheme[theme].border}
                text={globalTheme[theme].text}
                bg={
