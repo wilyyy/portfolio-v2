@@ -63,7 +63,7 @@ export const WorkData = [
                points of anime viewers such as finding good anime recommendations that
                tailor to their taste and being able to quickly share their favorite anime
                with others. This was created by a team of 5 as the final term project for
-               BCIT's D3 program.
+               BCIT&apos;s D3 program.
             </p>
             <p>
                The product is not finished to a minimum viable product standard and is
