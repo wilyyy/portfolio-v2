@@ -23,6 +23,11 @@ export default function Contact() {
                type="text"
                placeholder="Full Name"
                border={globalTheme[theme].border}
+               shadow={
+                  theme === "dark"
+                     ? "inset 4px 0px 4px rgba(0, 0, 0, 0.6), inset 0px 6px 4px rgba(0, 0, 0, 0.6)"
+                     : "none"
+               }
                text={globalTheme[theme].text}
                bg={
                   theme === "dark"
@@ -34,6 +39,11 @@ export default function Contact() {
                type="email"
                placeholder="Email Address"
                border={globalTheme[theme].border}
+               shadow={
+                  theme === "dark"
+                     ? "inset 4px 0px 4px rgba(0, 0, 0, 0.6), inset 0px 6px 4px rgba(0, 0, 0, 0.6)"
+                     : "none"
+               }
                text={globalTheme[theme].text}
                bg={
                   theme === "dark"
@@ -45,6 +55,11 @@ export default function Contact() {
                type="text"
                placeholder="Subject"
                border={globalTheme[theme].border}
+               shadow={
+                  theme === "dark"
+                     ? "inset 4px 0px 4px rgba(0, 0, 0, 0.6), inset 0px 6px 4px rgba(0, 0, 0, 0.6)"
+                     : "none"
+               }
                text={globalTheme[theme].text}
                bg={
                   theme === "dark"
@@ -55,6 +70,11 @@ export default function Contact() {
             <TextArea
                placeholder="Enter Message here..."
                border={globalTheme[theme].border}
+               shadow={
+                  theme === "dark"
+                     ? "inset 4px 0px 4px rgba(0, 0, 0, 0.6), inset 0px 6px 4px rgba(0, 0, 0, 0.6)"
+                     : "none"
+               }
                text={globalTheme[theme].text}
                bg={
                   theme === "dark"
@@ -106,8 +126,9 @@ const Input = styled.input`
    width: 75%;
    height: 42px;
    border-radius: 5px;
+   font-size: 16px;
    background: ${(props) => props.bg};
-   box-shadow: inset 4px 0px 4px rgba(0, 0, 0, 0.6), inset 0px 6px 4px rgba(0, 0, 0, 0.6);
+   box-shadow: ${(props) => props.shadow};
    color: ${(props) => props.text};
    padding: 2%;
    outline: none;
@@ -128,7 +149,7 @@ const TextArea = styled.textarea`
    max-height: 200px;
    border-radius: 5px;
    background: ${(props) => props.bg};
-   box-shadow: inset 4px 0px 4px rgba(0, 0, 0, 0.6), inset 0px 6px 4px rgba(0, 0, 0, 0.6);
+   box-shadow: ${(props) => props.shadow};
    color: ${(props) => props.text};
    padding: 2%;
    outline: none;

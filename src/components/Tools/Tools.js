@@ -20,6 +20,11 @@ export default function Tools() {
                type="text"
                placeholder="Search my toolbox..."
                border={globalTheme[theme].border}
+               shadow={
+                  theme === "dark"
+                     ? "inset 4px 0px 4px rgba(0, 0, 0, 0.6), inset 0px 6px 4px rgba(0, 0, 0, 0.6)"
+                     : "none"
+               }
                text={globalTheme[theme].text}
                value={searchVal}
                onChange={(e) => setSearchVal(e.target.value)}
@@ -115,9 +120,10 @@ const Bottom = styled.div`
 const Input = styled.input`
    width: 25%;
    height: 42px;
+   font-size: 16px;
    border-radius: 5px;
    background: ${(props) => props.bg};
-   box-shadow: inset 4px 0px 4px rgba(0, 0, 0, 0.6), inset 0px 6px 4px rgba(0, 0, 0, 0.6);
+   box-shadow: ${(props) => props.shadow};
    color: ${(props) => props.text};
    padding: 2%;
    outline: none;
