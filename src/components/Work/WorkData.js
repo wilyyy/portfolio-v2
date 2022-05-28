@@ -114,7 +114,15 @@ export const WorkData = [
       status: "townsquare",
       name: "TownSquare",
       role: "UI/UX Designer",
-      bio: <p>info coming soon</p>,
+      bio: (
+         <>
+            <p>
+               This project was created to research and design an application to help
+               people meet new friends with similar interests during the pandemic.
+            </p>
+            <p>More info coming soon..</p>
+         </>
+      ),
       tools: "Figma, Illustrator, Photoshop, After Effects",
       link: "https://www.figma.com/proto/UjvWL8KjrI3wSLBgrpSFMy/IDSP---TownSquare?node-id=135%3A5&starting-point-node-id=120%3A2&scaling=contain",
    },
