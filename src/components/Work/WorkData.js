@@ -44,7 +44,7 @@ export const WorkData = [
                This project was an interdisciplinary project created for BCIT&apos;s
                Digital Design & Development program by a team of six and the final product
                was presented to 200 people including students, faculty and industry
-               professionals
+               professionals.
             </p>
          </>
       ),
@@ -55,7 +55,22 @@ export const WorkData = [
       status: "scout",
       name: "Scout",
       role: "Project Manager & Fullstack Developer",
-      bio: <p>info coming soon</p>,
+      bio: (
+         <>
+            <p>
+               Anime database utilzing a MyAnimeList dataset from Kaggle. On top of
+               functioning as a regular anime database, this project aims to solve pain
+               points of anime viewers such as finding good anime recommendations that
+               tailor to their taste and being able to quickly share their favorite anime
+               with others. This was created by a team of 5 as the final term project for
+               BCIT&apos;s D3 program.
+            </p>
+            <p>
+               The product is not finished to a minimum viable product standard and is
+               currently on hold.
+            </p>
+         </>
+      ),
       tools: "React with Next.js, Express.js, MongoDB, Node.js",
       link: "https://scout-delta.vercel.app/",
    },
@@ -78,7 +93,20 @@ export const WorkData = [
       status: "steady",
       name: "Steady",
       role: "Frontend Developer",
-      bio: <p>info coming soon</p>,
+      bio: (
+         <>
+            <p>
+               Steady was a web application designed and developed by BCIT first year
+               students enrolled in the Digital Design & Development program. It was made
+               to tackle the social issue of depression and its symptoms, such as lack of
+               eating, sleep, and exercise.
+            </p>
+            <p>
+               It is to be noted that we are by no means professionals, just simply trying
+               to help individuals become more aware of their emotions and well-being.
+            </p>
+         </>
+      ),
       tools: "React Native / Expo, Firebase, PHP, MySQL",
       link: "https://steadyofficial.vercel.app/",
    },
@@ -86,7 +114,15 @@ export const WorkData = [
       status: "townsquare",
       name: "TownSquare",
       role: "UI/UX Designer",
-      bio: <p>info coming soon</p>,
+      bio: (
+         <>
+            <p>
+               This project was created to research and design an application to help
+               people meet new friends with similar interests during the pandemic.
+            </p>
+            <p>More info coming soon..</p>
+         </>
+      ),
       tools: "Figma, Illustrator, Photoshop, After Effects",
       link: "https://www.figma.com/proto/UjvWL8KjrI3wSLBgrpSFMy/IDSP---TownSquare?node-id=135%3A5&starting-point-node-id=120%3A2&scaling=contain",
    },
