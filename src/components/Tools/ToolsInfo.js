@@ -42,5 +42,5 @@ const Collection = styled.div`
    display: flex;
    flex-wrap: wrap;
    overflow-y: scroll;
-   padding: 1%;
+   padding: 0 1%;
 `;

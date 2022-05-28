@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { StyledIconBase } from "@styled-icons/styled-icon";
+import { useState } from "react";
 
 import { useTheme } from "@/src/utils/AppProvider";
 import { globalTheme } from "@/src/utils/ThemeConfig";
@@ -9,6 +10,7 @@ import ToolsInfo from "./ToolsInfo";
 
 export default function Tools() {
    const { theme } = useTheme();
+   const [searchVal, setSearchVal] = useState("");
 
    return (
       <ContentModal>
@@ -19,6 +21,8 @@ export default function Tools() {
                placeholder="Search my toolbox..."
                border={globalTheme[theme].border}
                text={globalTheme[theme].text}
+               value={searchVal}
+               onChange={(e) => setSearchVal(e.target.value)}
                bg={
                   theme === "dark"
                      ? "linear-gradient(152.97deg, rgba(28, 76, 121, 0.06) 0%, rgba(255, 255, 255, 0) 100%)"
@@ -27,33 +31,59 @@ export default function Tools() {
             />
          </Top>
          <Bottom border={globalTheme[theme].border}>
-            <ToolsInfo title="Development">
-               {ToolData?.filter((el) => el.type === "dev").map((el, index) => (
-                  <IconCont
-                     key={index}
-                     textSize={el.name.length > 11 ? "13.5px" : "14px"}
-                  >
-                     {el.icon}
-                     <p>{el.name}</p>
-                  </IconCont>
-               ))}
-            </ToolsInfo>
-            <ToolsInfo title="Design">
-               {ToolData?.filter((el) => el.type === "des").map((el, index) => (
-                  <IconCont key={index} textSize={el.name.length > 10 ? "13px" : "14px"}>
-                     {el.icon}
-                     <p>{el.name}</p>
-                  </IconCont>
-               ))}
-            </ToolsInfo>
-            <ToolsInfo title="Agile">
-               {ToolData?.filter((el) => el.type === "agi").map((el, index) => (
-                  <IconCont key={index} textSize={el.name.length > 10 ? "13px" : "14px"}>
-                     {el.icon}
-                     <p>{el.name}</p>
-                  </IconCont>
-               ))}
-            </ToolsInfo>
+            {searchVal === "" ? (
+               <>
+                  <ToolsInfo title="Development">
+                     {ToolData?.filter((el) => el.type === "dev").map((el, index) => (
+                        <IconCont
+                           key={index}
+                           textSize={el.name.length > 11 ? "13.5px" : "14px"}
+                        >
+                           {el.icon}
+                           <p>{el.name}</p>
+                        </IconCont>
+                     ))}
+                  </ToolsInfo>
+                  <ToolsInfo title="Design">
+                     {ToolData?.filter((el) => el.type === "des").map((el, index) => (
+                        <IconCont
+                           key={index}
+                           textSize={el.name.length > 10 ? "13px" : "14px"}
+                        >
+                           {el.icon}
+                           <p>{el.name}</p>
+                        </IconCont>
+                     ))}
+                  </ToolsInfo>
+                  <ToolsInfo title="Agile">
+                     {ToolData?.filter((el) => el.type === "agi").map((el, index) => (
+                        <IconCont
+                           key={index}
+                           textSize={el.name.length > 10 ? "13px" : "14px"}
+                        >
+                           {el.icon}
+                           <p>{el.name}</p>
+                        </IconCont>
+                     ))}
+                  </ToolsInfo>
+               </>
+            ) : (
+               <ToolsInfo title={`Showing results for: ${searchVal}`}>
+                  {ToolData?.filter((el) => {
+                     if (!searchVal) return true;
+                     if (el.name.toLowerCase().includes(searchVal.toLowerCase()))
+                        return true;
+                  }).map((el, index) => (
+                     <IconCont
+                        key={index}
+                        textSize={el.name.length > 11 ? "13.5px" : "14px"}
+                     >
+                        {el.icon}
+                        <p>{el.name}</p>
+                     </IconCont>
+                  ))}
+               </ToolsInfo>
+            )}
          </Bottom>
       </ContentModal>
    );
@@ -113,8 +143,8 @@ const IconCont = styled.div`
    margin: 2%;
 
    ${StyledIconBase} {
-      width: 50px;
-      height: 50px;
+      width: 45px;
+      height: 45px;
    }
    text-align: center;
 `;
