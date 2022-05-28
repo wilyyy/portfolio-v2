@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-import { useTheme, useProjStatus } from "@/src/utils/AppProvider";
+import { useTheme } from "@/src/utils/AppProvider";
 import { globalTheme } from "@/src/utils/ThemeConfig";
 import ContentModal from "@/src/components/ContentModals/ContentModal";
 import { WorkData } from "@/src/components/Work/WorkData";
@@ -10,7 +10,6 @@ import WorkDetails from "./WorkDetails";
 
 export default function Work() {
    const { theme } = useTheme();
-   // const { projStatus, setProjStatus } = useProjStatus();
    const [current, setCurrent] = useState("scope");
 
    return (
@@ -33,9 +32,7 @@ export default function Work() {
                ))}
             </Bottom>
          </Left>
-         {WorkData.filter((el) => {
-            if (el.status === current) return true;
-         })
+         {WorkData.filter((el) => el.status === current)
             .slice(0, 1)
             .map((el, index) => (
                <WorkDetails key={index} data={el} />

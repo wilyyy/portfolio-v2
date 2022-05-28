@@ -28,6 +28,7 @@ import { DigitalOcean } from "@styled-icons/fa-brands/DigitalOcean";
 import { Vercel } from "@styled-icons/simple-icons/Vercel";
 import { Jquery } from "@styled-icons/boxicons-logos/Jquery";
 import { Figma } from "@styled-icons/boxicons-logos/Figma";
+import { Blender } from "@styled-icons/boxicons-logos/Blender";
 
 // if search state is empty return all 3 divs (dev, des, agi) else return 1 for search result
 
@@ -59,7 +60,7 @@ export const ToolData = [
    { type: "des", name: "Illustrator", icon: <Adobeillustrator /> },
    { type: "des", name: "After Effects", icon: <Adobeaftereffects /> },
    { type: "des", name: "3DS Max", icon: <Autodesk /> },
-   { type: "des", name: "Blender", icon: <Typescript /> },
+   { type: "des", name: "Blender", icon: <Blender /> },
 
    //agile logos
    { type: "agi", name: "Github", icon: <Github /> },
