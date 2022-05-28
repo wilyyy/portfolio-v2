@@ -27,12 +27,13 @@ import { Miro } from "@styled-icons/simple-icons/Miro";
 import { DigitalOcean } from "@styled-icons/fa-brands/DigitalOcean";
 import { Vercel } from "@styled-icons/simple-icons/Vercel";
 import { Jquery } from "@styled-icons/boxicons-logos/Jquery";
+import { Figma } from "@styled-icons/boxicons-logos/Figma";
 
 // if search state is empty return all 3 divs (dev, des, agi) else return 1 for search result
 
 export const ToolData = [
    { type: "dev", name: "Javascript", icon: <JsSquare /> },
-   { type: "dev", name: "TypeScript", icon: <Typescript /> },
+   { type: "dev", name: "Typescript", icon: <Typescript /> },
    { type: "dev", name: "React.js", icon: <LogoReact /> },
    { type: "dev", name: "Next.js", icon: <Nextdotjs /> },
    { type: "dev", name: "React Native", icon: <LogoReact /> },
@@ -53,7 +54,7 @@ export const ToolData = [
    { type: "dev", name: "Vercel", icon: <Vercel /> },
 
    //design logos
-   { type: "des", name: "Figma", icon: <Typescript /> },
+   { type: "des", name: "Figma", icon: <Figma /> },
    { type: "des", name: "Photoshop", icon: <Adobephotoshop /> },
    { type: "des", name: "Illustrator", icon: <Adobeillustrator /> },
    { type: "des", name: "After Effects", icon: <Adobeaftereffects /> },
