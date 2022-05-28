@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { StyledIconBase } from "@styled-icons/styled-icon";
 
 import { useTheme } from "@/src/utils/AppProvider";
 import { globalTheme } from "@/src/utils/ThemeConfig";
@@ -27,15 +28,32 @@ export default function Tools() {
          </Top>
          <Bottom border={globalTheme[theme].border}>
             <ToolsInfo title="Development">
-               {ToolData?.map((el, index) => (
-                  <IconCont key={index}>
-                     {/* {el.icon} */}
+               {ToolData?.filter((el) => el.type === "dev").map((el, index) => (
+                  <IconCont
+                     key={index}
+                     textSize={el.name.length > 11 ? "13.5px" : "16px"}
+                  >
+                     {el.icon}
                      <p>{el.name}</p>
                   </IconCont>
                ))}
             </ToolsInfo>
-            <ToolsInfo title="Design"></ToolsInfo>
-            <ToolsInfo title="Agile"></ToolsInfo>
+            <ToolsInfo title="Design">
+               {ToolData?.filter((el) => el.type === "des").map((el, index) => (
+                  <IconCont key={index} textSize={el.name.length > 10 ? "13px" : "16px"}>
+                     {el.icon}
+                     <p>{el.name}</p>
+                  </IconCont>
+               ))}
+            </ToolsInfo>
+            <ToolsInfo title="Agile">
+               {ToolData?.filter((el) => el.type === "agi").map((el, index) => (
+                  <IconCont key={index} textSize={el.name.length > 10 ? "13px" : "16px"}>
+                     {el.icon}
+                     <p>{el.name}</p>
+                  </IconCont>
+               ))}
+            </ToolsInfo>
          </Bottom>
       </ContentModal>
    );
@@ -85,10 +103,18 @@ const Input = styled.input`
 `;
 
 const IconCont = styled.div`
-   width: auto;
-   height: 80px;
+   width: 95px;
+   height: 100px;
    display: flex;
    flex-direction: column;
-   justify-content: space-between;
+   /* justify-content: space-between; */
    align-items: center;
+   font-size: ${(props) => props.textSize};
+   margin: 1%;
+
+   ${StyledIconBase} {
+      width: 70px;
+      height: 70px;
+   }
+   text-align: center;
 `;

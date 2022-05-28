@@ -10,8 +10,8 @@ import WorkDetails from "./WorkDetails";
 
 export default function Work() {
    const { theme } = useTheme();
-   const { projStatus, setProjStatus } = useProjStatus();
-   // const [current, setCurrent] = useState();
+   // const { projStatus, setProjStatus } = useProjStatus();
+   const [current, setCurrent] = useState("scope");
 
    return (
       <ContentModal flexDex="row">
@@ -21,31 +21,25 @@ export default function Work() {
             </Top>
             <Bottom>
                {WorkData.map((el, index) => (
-                  <motion.h3
-                     whileHover={{ scale: 1.1 }}
-                     transition={{ type: "spring", stiffness: 500 }}
-                     key={index}
-                     onClick={() => setProjStatus(el.status)}
-                  >
-                     {el.name}
-                  </motion.h3>
+                  <div className="container" key={index}>
+                     <motion.h3
+                        whileHover={{ scale: 1.1 }}
+                        transition={{ type: "spring", stiffness: 500 }}
+                        onClick={() => setCurrent(el.status)}
+                     >
+                        {el.name}
+                     </motion.h3>
+                  </div>
                ))}
             </Bottom>
          </Left>
          {WorkData.filter((el) => {
-            if (el.status === projStatus) return true;
+            if (el.status === current) return true;
          })
             .slice(0, 1)
             .map((el, index) => (
                <WorkDetails key={index} data={el} />
             ))}
-
-         {/* <Right>
-            <Top>
-               <h2 className="title">My Work</h2>
-            </Top>
-            <Bottom></Bottom>
-         </Right> */}
       </ContentModal>
    );
 }
@@ -54,13 +48,18 @@ const Left = styled.div`
    width: 25%;
    height: 100%;
    border-right: 1px solid ${(props) => props.border};
-`;
 
-const Right = styled.div`
-   width: 75%;
-   height: 100%;
-   overflow-y: scroll;
-   padding-bottom: 4%;
+   .container {
+      width: 100%;
+      height: 65px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   h3 {
+      text-decoration: ${(props) => props.textDex};
+   }
 `;
 
 const Top = styled.div`

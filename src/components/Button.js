@@ -4,13 +4,14 @@ import { motion } from "framer-motion";
 import { useTheme } from "@/src/utils/AppProvider";
 import { globalTheme } from "../utils/ThemeConfig";
 
-export default function Button({ src, text = "Button" }) {
+export default function Button({ src, children, height = "84px" }) {
    const { theme } = useTheme();
 
    return (
       <Container
          href={src}
          target="_blank"
+         height={height}
          bg={
             theme === "dark"
                ? "linear-gradient(152.97deg, rgba(11, 15, 19, 0.83) 0%, rgba(30, 52, 72, 0.65) 100%)"
@@ -22,18 +23,18 @@ export default function Button({ src, text = "Button" }) {
          transition={{ type: "spring", stiffness: 500 }}
          textShadow={globalTheme[theme].textShadow}
       >
-         {text}
+         {children}
       </Container>
    );
 }
 
 const Container = styled(motion.a)`
-   width: 100%;
+   width: auto;
    font-weight: 600;
    display: flex;
-   justify-content: center;
+   justify-content: space-evenly;
    align-items: center;
-   height: 84px;
+   height: ${(props) => props.height};
    background: ${(props) => props.bg};
    border: 1px solid ${(props) => props.border};
    font-size: 20px;

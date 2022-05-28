@@ -23,7 +23,7 @@ export default function WorkDetails({ data }) {
                <b>Tools used:</b> {data.tools}
             </p>
             <div className="center">
-               <Button text="View Project" src={data.link} />
+               <Button src={data.link}>View Project</Button>
             </div>
          </Bottom>
       </Container>

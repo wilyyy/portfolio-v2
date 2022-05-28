@@ -70,4 +70,12 @@ const Container = styled(motion.div)`
       -webkit-user-select: none;
       -o-user-select: none;
    }
+
+   h3 {
+      user-select: none;
+      -moz-user-select: none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+      -o-user-select: none;
+   }
 `;
