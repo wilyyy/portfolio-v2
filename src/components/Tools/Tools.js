@@ -31,7 +31,7 @@ export default function Tools() {
                {ToolData?.filter((el) => el.type === "dev").map((el, index) => (
                   <IconCont
                      key={index}
-                     textSize={el.name.length > 11 ? "13.5px" : "16px"}
+                     textSize={el.name.length > 11 ? "13.5px" : "14px"}
                   >
                      {el.icon}
                      <p>{el.name}</p>
@@ -40,7 +40,7 @@ export default function Tools() {
             </ToolsInfo>
             <ToolsInfo title="Design">
                {ToolData?.filter((el) => el.type === "des").map((el, index) => (
-                  <IconCont key={index} textSize={el.name.length > 10 ? "13px" : "16px"}>
+                  <IconCont key={index} textSize={el.name.length > 10 ? "13px" : "14px"}>
                      {el.icon}
                      <p>{el.name}</p>
                   </IconCont>
@@ -48,7 +48,7 @@ export default function Tools() {
             </ToolsInfo>
             <ToolsInfo title="Agile">
                {ToolData?.filter((el) => el.type === "agi").map((el, index) => (
-                  <IconCont key={index} textSize={el.name.length > 10 ? "13px" : "16px"}>
+                  <IconCont key={index} textSize={el.name.length > 10 ? "13px" : "14px"}>
                      {el.icon}
                      <p>{el.name}</p>
                   </IconCont>
@@ -103,18 +103,18 @@ const Input = styled.input`
 `;
 
 const IconCont = styled.div`
-   width: 95px;
+   width: 65px;
    height: 100px;
    display: flex;
    flex-direction: column;
-   /* justify-content: space-between; */
+   justify-content: space-between;
    align-items: center;
    font-size: ${(props) => props.textSize};
-   margin: 1%;
+   margin: 2%;
 
    ${StyledIconBase} {
-      width: 70px;
-      height: 70px;
+      width: 50px;
+      height: 50px;
    }
    text-align: center;
 `;

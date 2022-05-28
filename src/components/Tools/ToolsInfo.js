@@ -11,7 +11,11 @@ export default function ToolsInfo({ title, children }) {
    return (
       <Container>
          <h3>{title}</h3>
-         <Collection border={globalTheme[theme].border} color={globalTheme[theme].text}>
+         <Collection
+            bg={theme === "dark" ? "rgba(0, 0, 0, 0.43)" : "#FAF8EB"}
+            border={globalTheme[theme].border}
+            color={globalTheme[theme].text}
+         >
             {children}
          </Collection>
       </Container>
@@ -33,10 +37,10 @@ const Container = styled.div`
 const Collection = styled.div`
    width: 100%;
    height: auto; //temp
-   background: rgba(0, 0, 0, 0.43);
+   background: ${(props) => props.bg};
    border: 1px solid ${(props) => props.border};
    display: flex;
    flex-wrap: wrap;
    overflow-y: scroll;
-   padding: 2% 4% 2% 1%;
+   padding: 1%;
 `;
