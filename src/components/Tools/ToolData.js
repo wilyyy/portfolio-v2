@@ -26,21 +26,23 @@ import { Trello } from "@styled-icons/boxicons-logos/Trello";
 import { Miro } from "@styled-icons/simple-icons/Miro";
 import { DigitalOcean } from "@styled-icons/fa-brands/DigitalOcean";
 import { Vercel } from "@styled-icons/simple-icons/Vercel";
+import { Jquery } from "@styled-icons/boxicons-logos/Jquery";
 
 // if search state is empty return all 3 divs (dev, des, agi) else return 1 for search result
 
 export const ToolData = [
+   { type: "dev", name: "Javascript", icon: <JsSquare /> },
+   { type: "dev", name: "TypeScript", icon: <Typescript /> },
    { type: "dev", name: "React.js", icon: <LogoReact /> },
    { type: "dev", name: "Next.js", icon: <Nextdotjs /> },
    { type: "dev", name: "React Native", icon: <LogoReact /> },
-   { type: "dev", name: "Javascript", icon: <JsSquare /> },
-   { type: "dev", name: "TypeScript", icon: <Typescript /> },
    { type: "dev", name: "Storybook", icon: <Storybook /> },
    { type: "dev", name: "HTML", icon: <Html5 /> },
    { type: "dev", name: "CSS", icon: <Css3 /> },
    { type: "dev", name: "Tailwind", icon: <TailwindCss /> },
    { type: "dev", name: "SASS", icon: <Sass /> },
    { type: "dev", name: "Styled Components", icon: <Styledcomponents /> },
+   { type: "dev", name: "Jquery", icon: <Jquery /> },
    { type: "dev", name: "Express.js", icon: <Express /> },
    { type: "dev", name: "Node.js", icon: <Nodejs /> },
    { type: "dev", name: "MongoDB", icon: <Mongodb /> },
