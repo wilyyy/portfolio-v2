@@ -11,17 +11,16 @@ export default function ToolsInfo({ title, children }) {
    return (
       <Container>
          <h3>{title}</h3>
-         <Collection
-            border={globalTheme[theme].border}
-            color={globalTheme[theme].text}
-         ></Collection>
+         <Collection border={globalTheme[theme].border} color={globalTheme[theme].text}>
+            {children}
+         </Collection>
       </Container>
    );
 }
 
 const Container = styled.div`
    width: 90%;
-   height: 271px; //temp
+   height: auto; //temp
    display: flex;
    flex-direction: column;
    justify-content: space-between;
@@ -33,7 +32,11 @@ const Container = styled.div`
 
 const Collection = styled.div`
    width: 100%;
-   height: 223px; //temp
+   height: auto; //temp
    background: rgba(0, 0, 0, 0.43);
    border: 1px solid ${(props) => props.border};
+   display: flex;
+   flex-wrap: wrap;
+   overflow-y: scroll;
+   padding: 2% 4% 2% 1%;
 `;

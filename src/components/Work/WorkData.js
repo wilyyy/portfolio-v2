@@ -1,18 +1,31 @@
+import styled from "styled-components";
+import { Github } from "@styled-icons/bootstrap/Github";
+import { StyledIconBase } from "@styled-icons/styled-icon";
+
+const Row = styled.div`
+   display: flex;
+
+   ${StyledIconBase} {
+      width: 31px;
+      height: 31px;
+   }
+`;
+
 export const WorkData = [
    {
       status: "scope",
       name: "ScopeX Labs",
       role: "Frontend Developer",
       bio: (
-         <p>
-            A key project I worked on my internship with ScopeMedia. Under mentorship from
-            ScopeMedia&apos;s staff, I had the pleasure of working with a talented intern
-            team of designers and developers to create this landing page for ScopeX Labs.
-            During the course of this project I not only learned industry standard coding
-            practices but I got to learn about practices from all kind of disciplines,
-            notably product design and digital marketing. While the codebase is
-            confidential information, the deployed page can be viewed below.
-         </p>
+         <>
+            <p>
+               A key project I worked on my internship with ScopeMedia. Under mentorship
+               from ScopeMedia&apos;s staff, I had the pleasure of working with a talented
+               intern team of designers and developers to create this landing page for
+               ScopeX Labs.
+            </p>
+            <p>The codebase is confidential but the deployed site can be found below.</p>
+         </>
       ),
       tools: "React.js, Typescript, Mailchimp, Google Analytics",
       link: "https://labs.scopex.ai/",
