@@ -8,7 +8,7 @@ import { useTheme } from "../utils/AppProvider";
 import { globalTheme } from "../utils/ThemeConfig";
 
 export default function Home() {
-   const [loading, setLoading] = useState(true);
+   const [loading, setLoading] = useState(false);
    const { theme } = useTheme();
 
    useEffect(() => {
