@@ -13,32 +13,31 @@ function MyApp({ Component, pageProps }) {
       <AppProvider>
          <Head>
             <meta charSet="utf-8" />
-            <title>
-               William Alvarez | Front End Developer based in Vancouver, Canada
-            </title>
+            <title>William Alvarez | Developer based in Vancouver, Canada</title>
+            <link rel="shortcut icon" href="/sitelogo.png" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta content="website" property="og:type" />
             <meta
-               content="William Alvarez | Front End Developer based in Vancouver, Canada"
+               content="William Alvarez | Developer based in Vancouver, Canada"
                property="og:site_name"
             />
             <meta
-               content="William Alvarez | Front End Developer based in Vancouver, Canada"
+               content="William Alvarez | Developer based in Vancouver, Canada"
                name="apple-mobile-web-app-title"
             />
             <meta
-               content="William Alvarez | Front End Developer based in Vancouver, Canada"
+               content="William Alvarez | Developer based in Vancouver, Canada"
                name="application-name"
             />
             <meta
-               content="William Alvarez | Front End Developer based in Vancouver, Canada<"
+               content="William Alvarez | Developer based in Vancouver, Canada"
                property="og:title"
             />
             {/* change this to image later */}
-            <meta
+            {/* <meta
                content="https://scopex.ai/static/media/searchPortalBanner3.5ed11e89.png"
                property="og:image"
-            />
+            /> */}
             <link href="https://willydev.com/" rel="canonical" />
             <meta
                content="The craft of William Laurel Alvarez, a web and mobile developer with a passion for human centered design."
