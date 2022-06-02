@@ -6,6 +6,7 @@ import emailjs from "@emailjs/browser";
 import { useTheme } from "@/src/utils/AppProvider";
 import { globalTheme } from "@/src/utils/ThemeConfig";
 import ContentModal from "@/src/components/ContentModals/ContentModal";
+import SuccessScreen from "./SuccessScreen";
 import { HoverZoom } from "@/src/utils/Animations";
 
 export default function Contact() {
@@ -16,7 +17,7 @@ export default function Contact() {
       subject: "",
       message: "",
    });
-   console.log(values);
+   const [status, setStatus] = useState("");
 
    const HandleChange = (e) => {
       setValues((values) => ({
@@ -37,6 +38,13 @@ export default function Contact() {
          .then(
             (response) => {
                console.log("SUCCESS!", response);
+               setValues({
+                  fullName: "",
+                  email: "",
+                  subject: "",
+                  message: "",
+               });
+               setStatus("success");
             },
             (error) => {
                console.log("FAILED", error);
@@ -49,101 +57,105 @@ export default function Contact() {
          <Top>
             <h2 className="title">Contact Me</h2>
          </Top>
-         <Bottom onSubmit={HandleSubmit}>
-            <Input
-               type="text"
-               placeholder="Full Name"
-               border={globalTheme[theme].border}
-               shadow={
-                  theme === "dark"
-                     ? "inset 4px 0px 4px rgba(0, 0, 0, 0.6), inset 0px 6px 4px rgba(0, 0, 0, 0.6)"
-                     : "none"
-               }
-               text={globalTheme[theme].text}
-               bg={
-                  theme === "dark"
-                     ? "linear-gradient(152.97deg, rgba(28, 76, 121, 0.06) 0%, rgba(255, 255, 255, 0) 100%)"
-                     : "#FAF8EB"
-               }
-               // value=""
-               name="fullName"
-               required
-               onChange={HandleChange}
-            />
-            <Input
-               type="email"
-               placeholder="Email Address"
-               border={globalTheme[theme].border}
-               shadow={
-                  theme === "dark"
-                     ? "inset 4px 0px 4px rgba(0, 0, 0, 0.6), inset 0px 6px 4px rgba(0, 0, 0, 0.6)"
-                     : "none"
-               }
-               text={globalTheme[theme].text}
-               bg={
-                  theme === "dark"
-                     ? "linear-gradient(152.97deg, rgba(28, 76, 121, 0.06) 0%, rgba(255, 255, 255, 0) 100%)"
-                     : "#FAF8EB"
-               }
-               // value=""
-               name="email"
-               required
-               onChange={HandleChange}
-            />
-            <Input
-               type="text"
-               placeholder="Subject"
-               border={globalTheme[theme].border}
-               shadow={
-                  theme === "dark"
-                     ? "inset 4px 0px 4px rgba(0, 0, 0, 0.6), inset 0px 6px 4px rgba(0, 0, 0, 0.6)"
-                     : "none"
-               }
-               text={globalTheme[theme].text}
-               bg={
-                  theme === "dark"
-                     ? "linear-gradient(152.97deg, rgba(28, 76, 121, 0.06) 0%, rgba(255, 255, 255, 0) 100%)"
-                     : "#FAF8EB"
-               }
-               name="subject"
-               required
-               onChange={HandleChange}
-            />
-            <TextArea
-               placeholder="Enter Message here..."
-               border={globalTheme[theme].border}
-               shadow={
-                  theme === "dark"
-                     ? "inset 4px 0px 4px rgba(0, 0, 0, 0.6), inset 0px 6px 4px rgba(0, 0, 0, 0.6)"
-                     : "none"
-               }
-               text={globalTheme[theme].text}
-               bg={
-                  theme === "dark"
-                     ? "linear-gradient(152.97deg, rgba(28, 76, 121, 0.06) 0%, rgba(255, 255, 255, 0) 100%)"
-                     : "#FAF8EB"
-               }
-               name="message"
-               required
-               onChange={HandleChange}
-            />
-            <Submit
-               type="submit"
-               // value="Send Message"
-               bg={
-                  theme === "dark"
-                     ? "linear-gradient(152.97deg, rgba(11, 15, 19, 0.83) 0%, rgba(30, 52, 72, 0.65) 100%)"
-                     : "#FAF8EB"
-               }
-               text={globalTheme[theme].text}
-               border={globalTheme[theme].border}
-               whileHover={{ scale: 1.1 }}
-               transition={{ type: "spring", stiffness: 500 }}
-               textShadow={globalTheme[theme].textShadow}
-            >
-               Send Message
-            </Submit>
-         </Bottom>
+         {status === "" ? (
+            <Bottom onSubmit={HandleSubmit}>
+               <Input
+                  type="text"
+                  placeholder="Full Name"
+                  border={globalTheme[theme].border}
+                  shadow={
+                     theme === "dark"
+                        ? "inset 4px 0px 4px rgba(0, 0, 0, 0.6), inset 0px 6px 4px rgba(0, 0, 0, 0.6)"
+                        : "none"
+                  }
+                  text={globalTheme[theme].text}
+                  bg={
+                     theme === "dark"
+                        ? "linear-gradient(152.97deg, rgba(28, 76, 121, 0.06) 0%, rgba(255, 255, 255, 0) 100%)"
+                        : "#FAF8EB"
+                  }
+                  // value=""
+                  name="fullName"
+                  required
+                  onChange={HandleChange}
+               />
+               <Input
+                  type="email"
+                  placeholder="Email Address"
+                  border={globalTheme[theme].border}
+                  shadow={
+                     theme === "dark"
+                        ? "inset 4px 0px 4px rgba(0, 0, 0, 0.6), inset 0px 6px 4px rgba(0, 0, 0, 0.6)"
+                        : "none"
+                  }
+                  text={globalTheme[theme].text}
+                  bg={
+                     theme === "dark"
+                        ? "linear-gradient(152.97deg, rgba(28, 76, 121, 0.06) 0%, rgba(255, 255, 255, 0) 100%)"
+                        : "#FAF8EB"
+                  }
+                  // value=""
+                  name="email"
+                  required
+                  onChange={HandleChange}
+               />
+               <Input
+                  type="text"
+                  placeholder="Subject"
+                  border={globalTheme[theme].border}
+                  shadow={
+                     theme === "dark"
+                        ? "inset 4px 0px 4px rgba(0, 0, 0, 0.6), inset 0px 6px 4px rgba(0, 0, 0, 0.6)"
+                        : "none"
+                  }
+                  text={globalTheme[theme].text}
+                  bg={
+                     theme === "dark"
+                        ? "linear-gradient(152.97deg, rgba(28, 76, 121, 0.06) 0%, rgba(255, 255, 255, 0) 100%)"
+                        : "#FAF8EB"
+                  }
+                  name="subject"
+                  required
+                  onChange={HandleChange}
+               />
+               <TextArea
+                  placeholder="Enter Message here..."
+                  border={globalTheme[theme].border}
+                  shadow={
+                     theme === "dark"
+                        ? "inset 4px 0px 4px rgba(0, 0, 0, 0.6), inset 0px 6px 4px rgba(0, 0, 0, 0.6)"
+                        : "none"
+                  }
+                  text={globalTheme[theme].text}
+                  bg={
+                     theme === "dark"
+                        ? "linear-gradient(152.97deg, rgba(28, 76, 121, 0.06) 0%, rgba(255, 255, 255, 0) 100%)"
+                        : "#FAF8EB"
+                  }
+                  name="message"
+                  required
+                  onChange={HandleChange}
+               />
+               <Submit
+                  type="submit"
+                  // value="Send Message"
+                  bg={
+                     theme === "dark"
+                        ? "linear-gradient(152.97deg, rgba(11, 15, 19, 0.83) 0%, rgba(30, 52, 72, 0.65) 100%)"
+                        : "#FAF8EB"
+                  }
+                  text={globalTheme[theme].text}
+                  border={globalTheme[theme].border}
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 500 }}
+                  textShadow={globalTheme[theme].textShadow}
+               >
+                  Send Message
+               </Submit>
+            </Bottom>
+         ) : (
+            <SuccessScreen changeStatus={() => setStatus("")} />
+         )}
       </ContentModal>
    );
 }

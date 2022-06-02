@@ -4,7 +4,12 @@ import { motion } from "framer-motion";
 import { useTheme } from "@/src/utils/AppProvider";
 import { globalTheme } from "../utils/ThemeConfig";
 
-export default function Button({ src, children, height = "84px" }) {
+export default function Button({
+   src,
+   children,
+   height = "84px",
+   onButtonCLick = () => {},
+}) {
    const { theme } = useTheme();
 
    return (
@@ -22,6 +27,7 @@ export default function Button({ src, children, height = "84px" }) {
          whileHover={{ scale: 1.1 }}
          transition={{ type: "spring", stiffness: 500 }}
          textShadow={globalTheme[theme].textShadow}
+         onClick={onButtonCLick}
       >
          {children}
       </Container>
@@ -47,4 +53,5 @@ const Container = styled(motion.a)`
    -khtml-user-select: none;
    -webkit-user-select: none;
    -o-user-select: none;
+   padding: 2%;
 `;
