@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 import { useTheme } from "@/src/utils/AppProvider";
 import { globalTheme } from "@/src/utils/ThemeConfig";
@@ -24,16 +25,31 @@ export default function Contact() {
       }));
    };
 
+   const HandleSubmit = (e) => {
+      e.preventDefault();
+      emailjs
+         .send(
+            "service_awzl0lt",
+            "template_h3wqplm",
+            values,
+            "user_xDZUA2dRiLfXxCojRewvB"
+         )
+         .then(
+            (response) => {
+               console.log("SUCCESS!", response);
+            },
+            (error) => {
+               console.log("FAILED", error);
+            }
+         );
+   };
+
    return (
       <ContentModal>
          <Top>
             <h2 className="title">Contact Me</h2>
          </Top>
          <Bottom onSubmit={HandleSubmit}>
-            {/* <p>
-               Contact form is currently not functioning, please email me at
-               williamlaurelalvarez@gmail.com instead
-            </p> */}
             <Input
                type="text"
                placeholder="Full Name"
@@ -89,7 +105,7 @@ export default function Contact() {
                      ? "linear-gradient(152.97deg, rgba(28, 76, 121, 0.06) 0%, rgba(255, 255, 255, 0) 100%)"
                      : "#FAF8EB"
                }
-               name="email"
+               name="subject"
                required
                onChange={HandleChange}
             />
