@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 import { useTheme } from "@/src/utils/AppProvider";
 import { globalTheme } from "@/src/utils/ThemeConfig";
@@ -8,17 +10,46 @@ import { HoverZoom } from "@/src/utils/Animations";
 
 export default function Contact() {
    const { theme } = useTheme();
+   const [values, setValues] = useState({
+      fullName: "",
+      email: "",
+      subject: "",
+      message: "",
+   });
+   console.log(values);
+
+   const HandleChange = (e) => {
+      setValues((values) => ({
+         ...values,
+         [e.target.name]: e.target.value,
+      }));
+   };
+
+   const HandleSubmit = (e) => {
+      e.preventDefault();
+      emailjs
+         .send(
+            "service_awzl0lt",
+            "template_h3wqplm",
+            values,
+            "user_xDZUA2dRiLfXxCojRewvB"
+         )
+         .then(
+            (response) => {
+               console.log("SUCCESS!", response);
+            },
+            (error) => {
+               console.log("FAILED", error);
+            }
+         );
+   };
 
    return (
       <ContentModal>
          <Top>
             <h2 className="title">Contact Me</h2>
          </Top>
-         <Bottom>
-            <p>
-               Contact form is currently not functioning, please email me at
-               williamlaurelalvarez@gmail.com instead
-            </p>
+         <Bottom onSubmit={HandleSubmit}>
             <Input
                type="text"
                placeholder="Full Name"
@@ -34,6 +65,10 @@ export default function Contact() {
                      ? "linear-gradient(152.97deg, rgba(28, 76, 121, 0.06) 0%, rgba(255, 255, 255, 0) 100%)"
                      : "#FAF8EB"
                }
+               // value=""
+               name="fullName"
+               required
+               onChange={HandleChange}
             />
             <Input
                type="email"
@@ -50,6 +85,10 @@ export default function Contact() {
                      ? "linear-gradient(152.97deg, rgba(28, 76, 121, 0.06) 0%, rgba(255, 255, 255, 0) 100%)"
                      : "#FAF8EB"
                }
+               // value=""
+               name="email"
+               required
+               onChange={HandleChange}
             />
             <Input
                type="text"
@@ -66,6 +105,9 @@ export default function Contact() {
                      ? "linear-gradient(152.97deg, rgba(28, 76, 121, 0.06) 0%, rgba(255, 255, 255, 0) 100%)"
                      : "#FAF8EB"
                }
+               name="subject"
+               required
+               onChange={HandleChange}
             />
             <TextArea
                placeholder="Enter Message here..."
@@ -81,10 +123,13 @@ export default function Contact() {
                      ? "linear-gradient(152.97deg, rgba(28, 76, 121, 0.06) 0%, rgba(255, 255, 255, 0) 100%)"
                      : "#FAF8EB"
                }
+               name="message"
+               required
+               onChange={HandleChange}
             />
             <Submit
                type="submit"
-               value="Send Message"
+               // value="Send Message"
                bg={
                   theme === "dark"
                      ? "linear-gradient(152.97deg, rgba(11, 15, 19, 0.83) 0%, rgba(30, 52, 72, 0.65) 100%)"
@@ -95,7 +140,9 @@ export default function Contact() {
                whileHover={{ scale: 1.1 }}
                transition={{ type: "spring", stiffness: 500 }}
                textShadow={globalTheme[theme].textShadow}
-            />
+            >
+               Send Message
+            </Submit>
          </Bottom>
       </ContentModal>
    );
@@ -113,7 +160,7 @@ const Top = styled.div`
    }
 `;
 
-const Bottom = styled.div`
+const Bottom = styled.form`
    width: 100%;
    height: 85%;
    display: flex;
@@ -161,7 +208,7 @@ const TextArea = styled.textarea`
    }
 `;
 
-const Submit = styled(motion.input)`
+const Submit = styled(motion.button)`
    width: 20%;
    font-weight: 600;
    height: 64px;

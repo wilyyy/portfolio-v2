@@ -8,6 +8,7 @@
       "lint": "next lint"
    },
    "dependencies": {
+      "@emailjs/browser": "^3.6.2",
       "axios": "^0.25.0",
       "baffle-react": "^0.0.2",
       "framer-motion": "^6.0.0",

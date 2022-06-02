@@ -31,7 +31,7 @@ export default function Icon({ folder, notepad, gear, mail, onButtonClick, isTex
                   width="70"
                   height="58"
                />
-               {isText && <p>Projects</p>}
+               {isText && <p>Work</p>}
             </Container>
          )}
 
