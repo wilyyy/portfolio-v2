@@ -5,6 +5,7 @@ import { createGlobalStyle } from "styled-components";
 import { useTheme } from "@/src/utils/AppProvider";
 import { globalTheme } from "@/src/utils/ThemeConfig";
 import Link from "next/link";
+import Script from "next/script";
 
 function MyApp({ Component, pageProps }) {
    const { theme } = useTheme();
@@ -12,6 +13,21 @@ function MyApp({ Component, pageProps }) {
    return (
       <AppProvider>
          <Head>
+            {/* <Script
+               strategy="lazyOnload"
+               src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+            />
+
+            <Script strategy="lazyOnload">
+               {`
+               window.dataLayer = window.dataLayer || [];
+               function gtag(){dataLayer.push(arguments);}
+               gtag('js', new Date());
+               gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+               page_path: window.location.pathname,
+               });
+            `}
+            </Script> */}
             <meta charSet="utf-8" />
             <title>William Alvarez | Developer based in Vancouver, Canada</title>
             <link rel="shortcut icon" href="/sitelogo.png" />

@@ -4,6 +4,10 @@ import { StyledIconBase } from "@styled-icons/styled-icon";
 
 const Row = styled.div`
    display: flex;
+   width: 20%;
+   height: auto;
+   align-items: center;
+   justify-content: space-between;
 
    ${StyledIconBase} {
       width: 31px;
@@ -25,6 +29,10 @@ export const WorkData = [
                ScopeX Labs.
             </p>
             <p>The codebase is confidential but the deployed site can be found below.</p>
+            {/* <Row>
+               <Github />
+               <a>Client Repo</a>
+            </Row> */}
          </>
       ),
       tools: "React.js, Typescript, Mailchimp, Google Analytics",
@@ -107,7 +115,7 @@ export const WorkData = [
             </p>
          </>
       ),
-      tools: "React Native / Expo, Firebase, PHP, MySQL",
+      tools: "React with Next.js, Figma",
       link: "https://steadyofficial.vercel.app/",
    },
    {

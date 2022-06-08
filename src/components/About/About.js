@@ -100,12 +100,12 @@ export default function About() {
                   <div className="divider" />
                </Spacer>
                <Credentials asp>
-                  <h2>Aspirations</h2>
+                  <h2>Progression</h2>
                   <div>
                      <p>
-                        With aspirations of becoming a Full Stack Developer / Engineer in
-                        the future, here are some technologies I want to explore in 2022
-                        and onward:
+                        With a love for diving deeper into software development and other
+                        ventures in tech, here are some technologies I want to explore in
+                        2022 and onward:
                      </p>
                      <ul>
                         <li>Further mastery of Express and MongoDB</li>
