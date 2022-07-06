@@ -37,9 +37,9 @@ const Container = styled(motion.div)`
    @media ${MediaQuery.screenMobile} {
       padding: 5%;
       flex-direction: column;
-      height: 100%;
+      /* height: 100%;
       max-height: -webkit-fill-available;
-      max-height: -moz-available;
+      max-height: -moz-available; */
    }
 `;
 
