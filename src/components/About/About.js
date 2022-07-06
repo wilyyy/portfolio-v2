@@ -1,10 +1,13 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 import { useTheme } from "@/src/utils/AppProvider";
 import { globalTheme } from "@/src/utils/ThemeConfig";
 import ContentModal from "../ContentModals/ContentModal";
+import William from "@/public/williamdonu.png";
+import WilliamBW from "@/public/williambw.png";
 
 export default function About() {
    const { theme } = useTheme();
@@ -39,7 +42,7 @@ export default function About() {
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 500 }}
                >
-                  Aspirations
+                  Progression
                </motion.h3>
             </Bottom>
          </Left>
@@ -64,7 +67,13 @@ export default function About() {
                         broaden my horizons.
                      </p>
                   </div>
-                  <div className="pictureGoHere"> pic of me coming soon c:</div>
+                  <div className="pictureGoHere">
+                     {theme === "dark" ? (
+                        <Image src={William} />
+                     ) : (
+                        <Image src={WilliamBW} />
+                     )}
+                  </div>
                </Bio>
                <Spacer bg={globalTheme[theme].border}>
                   <div className="divider" />
@@ -111,27 +120,25 @@ export default function About() {
                      <p>
                         With a love for diving deeper into software development and other
                         ventures in tech, here are some technologies I want to explore in
-                        2022 and onward:
+                        the future:
                      </p>
                      <ul>
                         <li>Further mastery of Express and MongoDB</li>
+                        <li>AWS EC2</li>
+                        <li>Python into Flask or Django</li>
+                        <li>PostgreSQL</li>
                         <li>Redux</li>
                         <li>D3.js</li>
-                        <li>PostgreSQL</li>
                         <li>Prisma</li>
-                        <li>Unity & VR/AR tech</li>
-                        <li>Python into Flask or Django</li>
-                        <li>GO</li>
                         <li>Docker</li>
+                        <li>Rust</li>
+                        <li>GO</li>
                         <li>Kubernetes</li>
-                        <li>Amazon Web Services</li>
-                        <li>Angular</li>
+                        <li>Unity & VR/AR tech</li>
+                        <li>Angular, Vue, other JS frameworks</li>
                      </ul>
                   </div>
-                  <p>
-                     I am also currently reading IDEO&apos;s Human Centered Design Toolkit
-                     to strengthen my design instincts and fundamentals.
-                  </p>
+                  <p>📖 Currently Reading: Head First Design Patterns by Eric Freeman</p>
                </Credentials>
             </Bottom>
          </Right>
@@ -187,7 +194,8 @@ const Bio = styled.div`
 
    .pictureGoHere {
       width: 35%;
-      height: 223px;
+      height: 303px;
+      overflow: hidden;
       background: rgba(0, 0, 0, 0.43);
       border: 1px solid #2e374d;
    }
@@ -211,7 +219,7 @@ const Spacer = styled.div`
 
 const Credentials = styled.div`
    width: 90%;
-   height: 136px;
+   height: 216px;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
