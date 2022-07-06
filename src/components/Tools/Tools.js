@@ -60,7 +60,7 @@ export default function Tools() {
                         </IconCont>
                      ))}
                   </ToolsInfo>
-                  <ToolsInfo title="Agile">
+                  <ToolsInfo title="Other">
                      {ToolData?.filter((el) => el.type === "agi").map((el, index) => (
                         <IconCont
                            key={index}
