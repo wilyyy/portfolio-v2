@@ -38,8 +38,8 @@ const Container = styled(motion.div)`
       padding: 5%;
       flex-direction: column;
       height: 100%;
-      height: -webkit-fill-available;
-      height: -moz-available;
+      max-height: -webkit-fill-available;
+      max-height: -moz-available;
    }
 `;
 
