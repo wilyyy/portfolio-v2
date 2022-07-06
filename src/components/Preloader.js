@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 import TypewritterText from "./TypewritterText";
+import { MediaQuery } from "../utils/MediaQuery";
 
 const Preloader = () => {
    return (
@@ -32,6 +33,14 @@ const Container = styled(motion.div)`
    justify-content: center;
    align-items: center;
    font-family: "consolas";
+
+   @media ${MediaQuery.screenMobile} {
+      padding: 5%;
+      flex-direction: column;
+      height: 100%;
+      height: -webkit-fill-available;
+      height: -moz-available;
+   }
 `;
 
 const Row = styled.p`

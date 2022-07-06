@@ -73,6 +73,12 @@ export default function About() {
                   <h2>Experience</h2>
                   <div>
                      <p>
+                        <strong>Web Developer</strong> @ Mercenary Digital
+                     </p>
+                     <p>June 2022 - Present</p>
+                  </div>
+                  <div>
+                     <p>
                         <strong>Frontend Developer Intern</strong> @ ScopeMedia
                      </p>
                      <p>March 2022 - May 2022</p>

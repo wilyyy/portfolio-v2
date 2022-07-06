@@ -6,6 +6,7 @@ import HomeScreen from "../components/HomeScreen";
 import Preloader from "../components/Preloader";
 import { useTheme } from "../utils/AppProvider";
 import { globalTheme } from "../utils/ThemeConfig";
+import { MediaQuery } from "../utils/MediaQuery";
 
 export default function Home() {
    const [loading, setLoading] = useState(false);
