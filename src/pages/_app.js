@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }) {
             <meta charSet="utf-8" />
             <title>William Alvarez | Developer based in Vancouver, Canada</title>
             <link rel="shortcut icon" href="/sitelogo.png" />
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            {/* <meta name="viewport" content="width=device-width, initial-scale=1" /> */}
             <meta content="website" property="og:type" />
             <meta
                content="William Alvarez | Developer based in Vancouver, Canada"
