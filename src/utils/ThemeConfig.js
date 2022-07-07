@@ -30,6 +30,8 @@ export const globalTheme = {
       textInput1_2: "rgba(255, 255, 255, 0)",
       textInput1_3: "rgba(0, 0, 0, 0.6)",
       textinput1_4: "rgba(0, 0, 0, 0.6)",
+
+      hover: "rgba(0, 0, 0, 0.4)",
    },
    light: {
       base: "#FAF8EB",
@@ -50,5 +52,7 @@ export const globalTheme = {
       textInput1_2: "#FAF8EB",
       textInput1_3: "#FAF8EB",
       textinput1_4: "#FAF8EB",
+
+      hover: "rgba(0, 0, 0, 0.2)",
    },
 };

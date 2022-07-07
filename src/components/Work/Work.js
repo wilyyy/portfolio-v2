@@ -18,17 +18,24 @@ export default function Work() {
             <Top>
                <h2 className="title">My Work</h2>
             </Top>
-            <Bottom>
+            <Bottom border={globalTheme[theme].border}>
                {WorkData.map((el, index) => (
-                  <div className="container" key={index}>
+                  <Option
+                     border={current === el.status ? globalTheme[theme].border : "none"}
+                     bg={
+                        current === el.status ? globalTheme[theme].textInput1_3 : "bnone"
+                     }
+                     hoverBg={globalTheme[theme].hover}
+                     key={index}
+                     onClick={() => setCurrent(el.status)}
+                  >
                      <motion.h3
                         whileHover={{ scale: 1.1 }}
                         transition={{ type: "spring", stiffness: 500 }}
-                        onClick={() => setCurrent(el.status)}
                      >
                         {el.name}
                      </motion.h3>
-                  </div>
+                  </Option>
                ))}
             </Bottom>
          </Left>
@@ -45,17 +52,21 @@ const Left = styled.div`
    width: 25%;
    height: 100%;
    border-right: 1px solid ${(props) => props.border};
+`;
 
-   .container {
-      width: 100%;
-      height: 65px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-   }
+const Option = styled.div`
+   width: 100%;
+   height: 65px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: ${(props) => props.bg};
+   border-bottom: 1px solid ${(props) => props.border};
+   border-top: 1px solid ${(props) => props.border};
 
-   h3 {
-      text-decoration: ${(props) => props.textDex};
+   :hover {
+      background: ${(props) => props.hoverBg};
+      transition: 0.5;
    }
 `;
 
@@ -76,4 +87,6 @@ const Bottom = styled.div`
    display: flex;
    flex-direction: column;
    align-items: center;
+
+   /* border-top: 1px solid ${(props) => props.border}; */
 `;
