@@ -9,7 +9,7 @@ import { globalTheme } from "../utils/ThemeConfig";
 import { MediaQuery } from "../utils/MediaQuery";
 
 export default function Home() {
-   const [loading, setLoading] = useState(true);
+   const [loading, setLoading] = useState(false);
    const { theme } = useTheme();
 
    useEffect(() => {
