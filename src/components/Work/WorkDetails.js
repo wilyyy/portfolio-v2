@@ -1,9 +1,6 @@
 import styled from "styled-components";
-import { motion } from "framer-motion";
-import { useState } from "react";
 
 import { useTheme } from "@/src/utils/AppProvider";
-import { globalTheme } from "@/src/utils/ThemeConfig";
 import Button from "@/src/components/Button";
 
 export default function WorkDetails({ data }) {
@@ -18,10 +15,10 @@ export default function WorkDetails({ data }) {
             <p>
                <b>Role:</b> {data.role}
             </p>
-            <div>{data.bio}</div>
             <p>
                <b>Tools used:</b> {data.tools}
             </p>
+            <div>{data.bio}</div>
             <div className="center">
                <Button src={data.link}>View Project</Button>
             </div>

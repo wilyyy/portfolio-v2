@@ -11,6 +11,13 @@ import WilliamBW from "@/public/williambw.png";
 
 export default function About() {
    const { theme } = useTheme();
+   const windowRef = useRef();
+   // const HandleScroll = () => {
+   //    refCurrent.scrollTo({
+   //       top: 0,
+   //       behaviour: "smooth",
+   //    });
+   // };
 
    return (
       <ContentModal flexDex="row">
@@ -22,31 +29,54 @@ export default function About() {
                <motion.h3
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 500 }}
-                  href="#about-me"
+                  onClick={() =>
+                     windowRef.current.scrollTo({
+                        top: 0,
+                        behavior: "smooth",
+                     })
+                  }
                >
                   About Me
                </motion.h3>
                <motion.h3
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 500 }}
+                  onClick={() =>
+                     windowRef.current.scrollTo({
+                        top: 430,
+                        behavior: "smooth",
+                     })
+                  }
                >
                   Experience
                </motion.h3>
                <motion.h3
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 500 }}
+                  onClick={() =>
+                     windowRef.current.scrollTo({
+                        top: 710,
+                        behavior: "smooth",
+                     })
+                  }
                >
                   Education
                </motion.h3>
                <motion.h3
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 500 }}
+                  onClick={() =>
+                     windowRef.current.scrollTo({
+                        top: 910,
+                        behavior: "smooth",
+                     })
+                  }
                >
                   Progression
                </motion.h3>
             </Bottom>
          </Left>
-         <Right>
+         <Right ref={windowRef}>
             <Top>
                <h2 className="title">Hiya, I&apos;m William!</h2>
             </Top>
