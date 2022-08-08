@@ -114,7 +114,7 @@ export default function About() {
                      <p>
                         <strong>Web Developer</strong> @ Petcurean
                      </p>
-                     <p>June 2022 - Present</p>
+                     <p>August 2022 - Present</p>
                   </div>
                   <div>
                      <p>
