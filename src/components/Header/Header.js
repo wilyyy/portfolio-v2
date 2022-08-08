@@ -77,7 +77,7 @@ const Inner = styled.div`
 `;
 
 const DateTimeCont = styled.div`
-   width: 16%;
+   width: 19%;
    display: flex;
    justify-content: space-between;
 `;
