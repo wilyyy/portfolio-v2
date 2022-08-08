@@ -112,7 +112,7 @@ export default function About() {
                   <h2>Experience</h2>
                   <div>
                      <p>
-                        <strong>Web Developer</strong> @ Mercenary Digital
+                        <strong>Web Developer</strong> @ Petcurean
                      </p>
                      <p>June 2022 - Present</p>
                   </div>

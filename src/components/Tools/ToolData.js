@@ -29,6 +29,7 @@ import { Vercel } from "@styled-icons/simple-icons/Vercel";
 import { Jquery } from "@styled-icons/boxicons-logos/Jquery";
 import { Figma } from "@styled-icons/boxicons-logos/Figma";
 import { Blender } from "@styled-icons/boxicons-logos/Blender";
+import { Contentful } from "@styled-icons/simple-icons/Contentful";
 
 // if search state is empty return all 3 divs (dev, des, agi) else return 1 for search result
 
@@ -51,6 +52,7 @@ export const ToolData = [
    { type: "dev", name: "PHP", icon: <Php /> },
    { type: "dev", name: "Firebase", icon: <Firebase /> },
    { type: "dev", name: "MySQL", icon: <Mysql /> },
+   { type: "dev", name: "Contentful", icon: <Contentful /> },
    { type: "dev", name: "Digital Ocean", icon: <DigitalOcean /> },
    { type: "dev", name: "Vercel", icon: <Vercel /> },
 
