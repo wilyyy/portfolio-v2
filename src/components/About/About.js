@@ -84,17 +84,18 @@ export default function About() {
                <Bio id="about-me">
                   <div className="text">
                      <p>
-                        I&apos;m a developer and designer hybrid based in Vancouver, BC.
-                        With my creations, I have the most fun when I can let my
-                        imagination run wild and limit test unconventional ideas side by
-                        side with current conventional processes, repeating this until an
-                        ideal product is created.
+                        I&apos;m a developer and designer hybrid that enjoys limit testing
+                        unconventional ideas with established design heuristics, iterating
+                        until an ideal unique experience is created.
                      </p>
                      <p>
-                        Besides that, I enjoy dystopian or psychological novels,
-                        documentaries about random topics, gaming and esports. Consumed by
-                        lifelong wanderlust, I love to travel and explore the world to
-                        broaden my horizons.
+                        Besides that, I&apos;m passionate about cognitive and social
+                        psychology as well as the luxury and esports industries. Consumed
+                        by lifelong wanderlust, I love to travel the world to unwind and
+                        deviate from my everyday routine.
+                     </p>
+                     <p>
+                        ✈️ <b>Next Destination:</b> Coopenhagen, Denmark
                      </p>
                   </div>
                   <div className="pictureGoHere">
@@ -156,9 +157,9 @@ export default function About() {
                         <li>Further mastery of Express and MongoDB</li>
                         <li>AWS EC2</li>
                         <li>Python into Flask or Django</li>
-                        <li>PostgreSQL</li>
                         <li>Redux</li>
-                        <li>D3.js</li>
+                        <li>D3.js or other data visualization tools</li>
+                        <li>PostgreSQL</li>
                         <li>Prisma</li>
                         <li>Docker</li>
                         <li>Rust</li>
@@ -168,7 +169,10 @@ export default function About() {
                         <li>Angular, Vue, other JS frameworks</li>
                      </ul>
                   </div>
-                  <p>📖 Currently Reading: Head First Design Patterns by Eric Freeman</p>
+                  <p>
+                     📖 <b>Currently Reading:</b> Head First Design Patterns by Eric
+                     Freeman
+                  </p>
                </Credentials>
             </Bottom>
          </Right>
@@ -216,7 +220,7 @@ const Bio = styled.div`
 
    .text {
       width: 60%;
-      height: 260px;
+      height: 300px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -224,7 +228,7 @@ const Bio = styled.div`
 
    .pictureGoHere {
       width: 35%;
-      height: 303px;
+      height: 300px;
       overflow: hidden;
       background: rgba(0, 0, 0, 0.43);
       border: 1px solid #2e374d;
