@@ -130,7 +130,7 @@ export const WorkData = [
          <>
             <p>
                An early project created in 2014 during my sophomore year of high school
-               and one where I had discovered my passion for digital asset creating using
+               and one where I had discovered my passion for digital asset creation using
                3DS Max and Photoshop.{" "}
             </p>
             <p>
