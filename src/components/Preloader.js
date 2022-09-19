@@ -16,7 +16,10 @@ const Preloader = () => {
             <Text color="green">william_laurel@alvarez</Text>
             <Text color="purple"> ~/: </Text>
          </Row>
-         <TypewritterText text="portfolio is currently a work in progress" delay={40} />
+         <TypewritterText
+            text="portfolio's mobile experience is a work in progress"
+            delay={40}
+         />
          {/* <TypewritterText text="npm start willy-portfolio" delay={40} /> */}
       </Container>
    );
