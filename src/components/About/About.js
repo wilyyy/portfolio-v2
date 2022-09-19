@@ -95,7 +95,7 @@ export default function About() {
                         deviate from my everyday routine.
                      </p>
                      <p>
-                        ✈️ <b>Next Destination:</b> Coopenhagen, Denmark
+                        ✈️ <b>Dream Destinations:</b> Coopenhagen, Antwerp, Tokyo
                      </p>
                   </div>
                   <div className="pictureGoHere">

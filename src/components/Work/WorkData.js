@@ -1,20 +1,3 @@
-import styled from "styled-components";
-import { Github } from "@styled-icons/bootstrap/Github";
-import { StyledIconBase } from "@styled-icons/styled-icon";
-
-const Row = styled.div`
-   display: flex;
-   width: 20%;
-   height: auto;
-   align-items: center;
-   justify-content: space-between;
-
-   ${StyledIconBase} {
-      width: 31px;
-      height: 31px;
-   }
-`;
-
 export const WorkData = [
    {
       status: "scope",
@@ -29,10 +12,6 @@ export const WorkData = [
                ScopeX Labs.
             </p>
             <p>The codebase is confidential but the deployed site can be found below.</p>
-            {/* <Row>
-               <Github />
-               <a>Client Repo</a>
-            </Row> */}
          </>
       ),
       tools: "React.js, Typescript, Mailchimp, Google Analytics",
@@ -56,7 +35,7 @@ export const WorkData = [
             </p>
          </>
       ),
-      tools: "React Native with Expo, Firebase, PHP, MySQL",
+      tools: "React Native with Expo, Firebase, PHP, MySQL, Digital Ocean, Google Developer API",
       link: "https://github.com/wilyyy/CompassPlus",
    },
    {
@@ -87,37 +66,42 @@ export const WorkData = [
       name: "Vigilant",
       role: "Developer",
       bio: (
-         <p>
-            Coming back from winter break, I worked with a team of 4 to create an
-            application in one week for the Web Development 4 class at BCIT&apos;s D3
-            Program. The premise of this application is to theorycraft solutions to the
-            increasing levels of crime in the Vancouver area during the pandemic.
-         </p>
-      ),
-      tools: "React with Next.js",
-      link: "https://vigilant.vercel.app/",
-   },
-   {
-      status: "steady",
-      name: "Steady",
-      role: "Frontend Developer",
-      bio: (
          <>
             <p>
-               Steady was a web application designed and developed by BCIT first year
-               students enrolled in the Digital Design & Development program. It was made
-               to tackle the social issue of depression and its symptoms, such as lack of
-               eating, sleep, and exercise.
+               Coming back from winter break, I worked with a team of 4 to create an
+               application in one week for the Web Development 4 class at BCIT&apos;s D3
+               Program.
             </p>
             <p>
-               It is to be noted that we are by no means professionals, just simply trying
-               to help individuals become more aware of their emotions and well-being.
+               The premise of this application is to theorycraft solutions to the
+               increasing levels of crime in the Vancouver area during the pandemic.
             </p>
          </>
       ),
-      tools: "React with Next.js, Figma",
-      link: "https://steadyofficial.vercel.app/",
+      tools: "React with Next.js, Google Developer API",
+      link: "https://vigilant.vercel.app/",
    },
+   // {
+   //    status: "steady",
+   //    name: "Steady",
+   //    role: "Frontend Developer",
+   //    bio: (
+   //       <>
+   //          <p>
+   //             Steady was a web application designed and developed by BCIT first year
+   //             students enrolled in the Digital Design & Development program. It was made
+   //             to tackle the social issue of depression and its symptoms, such as lack of
+   //             eating, sleep, and exercise.
+   //          </p>
+   //          <p>
+   //             It is to be noted that we are by no means professionals, just simply trying
+   //             to help individuals become more aware of their emotions and well-being.
+   //          </p>
+   //       </>
+   //    ),
+   //    tools: "React with Next.js, Figma",
+   //    link: "https://steadyofficial.vercel.app/",
+   // },
    {
       status: "townsquare",
       name: "TownSquare",
@@ -128,10 +112,34 @@ export const WorkData = [
                This project was created to research and design an application to help
                people meet new friends with similar interests during the pandemic.
             </p>
-            <p>More info coming soon..</p>
+            <p>
+               Collaborating with developers from BCIT&apos;s full stack web development
+               program, this project helped strengthen my design thinking instincts and
+               ignited a passion for user experience design
+            </p>
          </>
       ),
       tools: "Figma, Illustrator, Photoshop, After Effects",
       link: "https://www.figma.com/proto/UjvWL8KjrI3wSLBgrpSFMy/IDSP---TownSquare?node-id=135%3A5&starting-point-node-id=120%3A2&scaling=contain",
+   },
+   {
+      status: "snowfall",
+      name: "Snowfall",
+      role: "Game Developer",
+      bio: (
+         <>
+            <p>
+               An early project created in 2014 during my sophomore year of high school
+               and one where I had discovered my passion for digital asset creating using
+               3DS Max and Photoshop.{" "}
+            </p>
+            <p>
+               I predicted the demand for battle royale video games to surge and sought to
+               create one for my IB MYP Personal Project.{" "}
+            </p>
+         </>
+      ),
+      tools: "CryEngine 3, 3DS Max, Adobe Photoshop, C++, LUA",
+      link: "https://www.youtube.com/watch?v=PnpZYG9vqpA",
    },
 ];

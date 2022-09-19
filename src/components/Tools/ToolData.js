@@ -30,6 +30,10 @@ import { Jquery } from "@styled-icons/boxicons-logos/Jquery";
 import { Figma } from "@styled-icons/boxicons-logos/Figma";
 import { Blender } from "@styled-icons/boxicons-logos/Blender";
 import { Contentful } from "@styled-icons/simple-icons/Contentful";
+import { Sentry } from "@styled-icons/simple-icons/Sentry";
+import { Aws } from "@styled-icons/boxicons-logos/Aws";
+import { Netlify } from "@styled-icons/simple-icons/Netlify";
+import { Adobeindesign } from "@styled-icons/simple-icons/Adobeindesign";
 
 // if search state is empty return all 3 divs (dev, des, agi) else return 1 for search result
 
@@ -53,20 +57,24 @@ export const ToolData = [
    { type: "dev", name: "Firebase", icon: <Firebase /> },
    { type: "dev", name: "MySQL", icon: <Mysql /> },
    { type: "dev", name: "Contentful", icon: <Contentful /> },
-   { type: "dev", name: "Digital Ocean", icon: <DigitalOcean /> },
-   { type: "dev", name: "Vercel", icon: <Vercel /> },
 
    //design logos
    { type: "des", name: "Figma", icon: <Figma /> },
    { type: "des", name: "Photoshop", icon: <Adobephotoshop /> },
    { type: "des", name: "Illustrator", icon: <Adobeillustrator /> },
    { type: "des", name: "After Effects", icon: <Adobeaftereffects /> },
+   { type: "des", name: "Indesign", icon: <Adobeindesign /> },
    { type: "des", name: "3DS Max", icon: <Autodesk /> },
    { type: "des", name: "Blender", icon: <Blender /> },
 
    //agile logos
    { type: "agi", name: "Github", icon: <Github /> },
    { type: "agi", name: "Bitbucket", icon: <Bitbucket /> },
+   { type: "agi", name: "AWS", icon: <Aws /> },
+   { type: "agi", name: "Digital Ocean", icon: <DigitalOcean /> },
+   { type: "agi", name: "Vercel", icon: <Vercel /> },
+   { type: "agi", name: "Netlify", icon: <Netlify /> },
+   { type: "agi", name: "Sentry", icon: <Sentry /> },
    { type: "agi", name: "Notion", icon: <Notion /> },
    { type: "agi", name: "Jira", icon: <Jirasoftware /> },
    { type: "agi", name: "Trello", icon: <Trello /> },
