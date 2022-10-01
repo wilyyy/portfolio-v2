@@ -76,7 +76,7 @@ export default function Tools() {
                <ToolsInfo title={`Showing results for: ${searchVal}`}>
                   {ToolData?.filter((el) => {
                      if (!searchVal) return true;
-                     if (el.name.toLowerCase().includes(searchVal.toLowerCase()))
+                     if (el.name.toLowerCase().startsWith(searchVal.toLowerCase()))
                         return true;
                   }).map((el, index) => (
                      <IconCont
