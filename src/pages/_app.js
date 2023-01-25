@@ -49,18 +49,13 @@ function MyApp({ Component, pageProps }) {
                content="William Alvarez | Developer based in Vancouver, Canada"
                property="og:title"
             />
-            {/* kinda useless */}
-            {/* <meta
-               content="https://scopex.ai/static/media/searchPortalBanner3.5ed11e89.png"
-               property="og:image"
-            /> */}
             <link href="https://willydev.com/" rel="canonical" />
             <meta
-               content="The craft of William Laurel Alvarez, a web and mobile developer with a passion for human centered design."
+               content="The craft of William Laurel Alvarez, a fullstack developer with a passion for human centered design."
                name="description"
             />
             <meta
-               content="The craft of William Laurel Alvarez, a web and mobile developer with a passion for human centered design."
+               content="The craft of William Laurel Alvarez, a fullstack developer with a passion for human centered design."
                property="og:description"
             />
             <link

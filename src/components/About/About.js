@@ -12,12 +12,6 @@ import WilliamBW from "@/public/williambw.png";
 export default function About() {
    const { theme } = useTheme();
    const windowRef = useRef();
-   // const HandleScroll = () => {
-   //    refCurrent.scrollTo({
-   //       top: 0,
-   //       behaviour: "smooth",
-   //    });
-   // };
 
    return (
       <ContentModal flexDex="row">
@@ -78,24 +72,24 @@ export default function About() {
          </Left>
          <Right ref={windowRef}>
             <Top>
-               <h2 className="title">Hiya, I&apos;m William!</h2>
+               <h2 className="title">Hiya, I&apos;m William! 👋</h2>
             </Top>
             <Bottom>
                <Bio id="about-me">
                   <div className="text">
                      <p>
-                        I&apos;m a developer and designer hybrid that enjoys limit testing
-                        unconventional ideas with established design heuristics, iterating
-                        until an ideal unique experience is created.
+                        I&apos;m a full stack engineer with a background in a strong
+                        background in design.
                      </p>
                      <p>
-                        Besides that, I&apos;m passionate about cognitive and social
-                        psychology as well as the luxury and esports industries. Consumed
-                        by lifelong wanderlust, I love to travel the world to unwind and
-                        deviate from my everyday routine.
+                        I&apos;m passionate about cognitive & social psychology, fashion,
+                        esports, and emerging tech such as AI and 3D printing. Lost in
+                        wanderlust, I also love to travel the world for inspiration and to
+                        broaden my horizons
                      </p>
                      <p>
-                        ✈️ <b>Dream Destinations:</b> Coopenhagen, Antwerp, Tokyo
+                        I&apos;m open for commissions so feel free to connect with me or
+                        send me mail!
                      </p>
                   </div>
                   <div className="pictureGoHere">
@@ -155,7 +149,7 @@ export default function About() {
                      </p>
                      <ul>
                         <li>Further mastery of Express and MongoDB</li>
-                        <li>AWS EC2</li>
+                        <li>AWS EC2 and AWS Lambda</li>
                         <li>Python into Flask or Django</li>
                         <li>Redux</li>
                         <li>D3.js or other data visualization tools</li>
