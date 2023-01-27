@@ -69,6 +69,7 @@ const Container = styled(motion.div)`
       -khtml-user-select: none;
       -webkit-user-select: none;
       -o-user-select: none;
+      cursor: pointer;
    }
 
    h3 {

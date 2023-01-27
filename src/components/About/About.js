@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
+import { useStatus } from "@/src/utils/AppProvider";
 
 import { useTheme } from "@/src/utils/AppProvider";
 import { globalTheme } from "@/src/utils/ThemeConfig";
@@ -12,6 +13,7 @@ import WilliamBW from "@/public/williambw.png";
 export default function About() {
    const { theme } = useTheme();
    const windowRef = useRef();
+   const { setStatus } = useStatus();
 
    return (
       <ContentModal flexDex="row">
@@ -78,18 +80,24 @@ export default function About() {
                <Bio id="about-me">
                   <div className="text">
                      <p>
-                        I&apos;m a full stack engineer with a background in a strong
-                        background in design.
+                        Currently based in Vancouver, I&apos;m a full stack engineer with
+                        a strong background in design.
                      </p>
                      <p>
-                        I&apos;m passionate about cognitive & social psychology, fashion,
+                        I like to talk about about cognitive & social psychology, fashion,
                         esports, and emerging tech such as AI and 3D printing. Lost in
                         wanderlust, I also love to travel the world for inspiration and to
-                        broaden my horizons
+                        broaden my horizons.
                      </p>
                      <p>
-                        I&apos;m open for commissions so feel free to connect with me or
-                        send me mail!
+                        Open to collaboration on side projects so feel free to{" "}
+                        <motion.a
+                           href="https://www.linkedin.com/in/william-alvarez-76b806149/"
+                           target="_blank"
+                        >
+                           connect with me on LinkedIn
+                        </motion.a>{" "}
+                        or <span onClick={() => setStatus("mail")}>send me mail!</span>
                      </p>
                   </div>
                   <div className="pictureGoHere">
@@ -204,6 +212,10 @@ const Bottom = styled.div`
    display: flex;
    flex-direction: column;
    align-items: center;
+
+   h3 {
+      cursor: pointer;
+   }
 `;
 
 const Bio = styled.div`
@@ -214,10 +226,19 @@ const Bio = styled.div`
 
    .text {
       width: 60%;
-      height: 300px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+
+      p {
+         margin-bottom: 5px;
+      }
+   }
+
+   a,
+   span {
+      font-weight: bold;
+      text-decoration: underline;
+      cursor: pointer;
    }
 
    .pictureGoHere {

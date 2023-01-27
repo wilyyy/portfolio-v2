@@ -54,4 +54,6 @@ const Container = styled(motion.a)`
    -webkit-user-select: none;
    -o-user-select: none;
    padding: 2%;
+
+   pointer: cursor;
 `;
