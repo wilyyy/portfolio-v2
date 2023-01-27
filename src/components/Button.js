@@ -20,7 +20,7 @@ export default function Button({
          bg={
             theme === "dark"
                ? "linear-gradient(152.97deg, rgba(11, 15, 19, 0.83) 0%, rgba(30, 52, 72, 0.65) 100%)"
-               : "#FAF8EB"
+               : "rgba(0, 0, 0, 0.2)"
          }
          text={globalTheme[theme].text}
          border={globalTheme[theme].border}
@@ -54,4 +54,6 @@ const Container = styled(motion.a)`
    -webkit-user-select: none;
    -o-user-select: none;
    padding: 2%;
+
+   pointer: cursor;
 `;

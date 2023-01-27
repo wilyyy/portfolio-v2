@@ -63,6 +63,7 @@ const Option = styled.div`
    background: ${(props) => props.bg};
    border-bottom: 1px solid ${(props) => props.border};
    border-top: 1px solid ${(props) => props.border};
+   cursor: pointer;
 
    :hover {
       background: ${(props) => props.hoverBg};

@@ -118,4 +118,8 @@ const Selected = styled.div`
          ${(props) => props.gradient4} 102.76%
       );
    /* border: 1px solid ${(props) => props.border}; */
+
+   * {
+      cursor: pointer;
+   }
 `;

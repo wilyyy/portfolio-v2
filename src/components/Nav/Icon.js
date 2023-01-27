@@ -96,4 +96,5 @@ const Container = styled(motion.div)`
    align-items: center;
    width: auto;
    height: ${(props) => props.height};
+   cursor: pointer;
 `;

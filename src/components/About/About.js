@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
+import { useStatus } from "@/src/utils/AppProvider";
 
 import { useTheme } from "@/src/utils/AppProvider";
 import { globalTheme } from "@/src/utils/ThemeConfig";
@@ -12,12 +13,7 @@ import WilliamBW from "@/public/williambw.png";
 export default function About() {
    const { theme } = useTheme();
    const windowRef = useRef();
-   // const HandleScroll = () => {
-   //    refCurrent.scrollTo({
-   //       top: 0,
-   //       behaviour: "smooth",
-   //    });
-   // };
+   const { setStatus } = useStatus();
 
    return (
       <ContentModal flexDex="row">
@@ -78,24 +74,33 @@ export default function About() {
          </Left>
          <Right ref={windowRef}>
             <Top>
-               <h2 className="title">Hiya, I&apos;m William!</h2>
+               <h2 className="title">Hiya, I&apos;m William! 👋</h2>
             </Top>
             <Bottom>
                <Bio id="about-me">
                   <div className="text">
                      <p>
-                        I&apos;m a developer and designer hybrid that enjoys limit testing
-                        unconventional ideas with established design heuristics, iterating
-                        until an ideal unique experience is created.
+                        Currently based in Vancouver, I&apos;m a full stack engineer with
+                        a strong background in design.
                      </p>
                      <p>
-                        Besides that, I&apos;m passionate about cognitive and social
-                        psychology as well as the luxury and esports industries. Consumed
-                        by lifelong wanderlust, I love to travel the world to unwind and
-                        deviate from my everyday routine.
+                        I like to talk about about cognitive & social psychology, fashion,
+                        esports, and emerging tech such as AI and 3D printing. Lost in
+                        wanderlust, I also love to travel the world for inspiration and to
+                        broaden my horizons.
                      </p>
                      <p>
-                        ✈️ <b>Dream Destinations:</b> Coopenhagen, Antwerp, Tokyo
+                        Open to collaboration on side projects so feel free to{" "}
+                        <motion.a
+                           href="https://www.linkedin.com/in/william-alvarez-76b806149/"
+                           target="_blank"
+                        >
+                           connect with me on LinkedIn
+                        </motion.a>{" "}
+                        or{" "}
+                        <span onClick={() => setStatus("mail")} className="mail_link">
+                           send me mail!
+                        </span>
                      </p>
                   </div>
                   <div className="pictureGoHere">
@@ -155,7 +160,7 @@ export default function About() {
                      </p>
                      <ul>
                         <li>Further mastery of Express and MongoDB</li>
-                        <li>AWS EC2</li>
+                        <li>AWS EC2 and AWS Lambda</li>
                         <li>Python into Flask or Django</li>
                         <li>Redux</li>
                         <li>D3.js or other data visualization tools</li>
@@ -210,6 +215,10 @@ const Bottom = styled.div`
    display: flex;
    flex-direction: column;
    align-items: center;
+
+   h3 {
+      cursor: pointer;
+   }
 `;
 
 const Bio = styled.div`
@@ -220,10 +229,19 @@ const Bio = styled.div`
 
    .text {
       width: 60%;
-      height: 300px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+
+      p {
+         margin-bottom: 5px;
+      }
+   }
+
+   a,
+   span.mail_link {
+      font-weight: bold;
+      text-decoration: underline;
+      cursor: pointer;
    }
 
    .pictureGoHere {

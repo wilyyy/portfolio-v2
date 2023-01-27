@@ -17,7 +17,7 @@ export default function CenterScreen() {
                update={true}
                revealDuration={1000}
             >
-               The craft of William Laurel Alvarez, a fullstack developer with a passion
+               The craft of William Laurel Alvarez, a fullstack engineer with a passion
                for human centered design.
             </Baffle>
             <Row>
