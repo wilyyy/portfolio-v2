@@ -97,7 +97,10 @@ export default function About() {
                         >
                            connect with me on LinkedIn
                         </motion.a>{" "}
-                        or <span onClick={() => setStatus("mail")}>send me mail!</span>
+                        or{" "}
+                        <span onClick={() => setStatus("mail")} className="mail_link">
+                           send me mail!
+                        </span>
                      </p>
                   </div>
                   <div className="pictureGoHere">
@@ -235,7 +238,7 @@ const Bio = styled.div`
    }
 
    a,
-   span {
+   span.mail_link {
       font-weight: bold;
       text-decoration: underline;
       cursor: pointer;
