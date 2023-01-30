@@ -78,15 +78,17 @@ export default function Tools() {
                      if (!searchVal) return true;
                      if (el.name.toLowerCase().startsWith(searchVal.toLowerCase()))
                         return true;
-                  }).map((el, index) => (
-                     <IconCont
-                        key={index}
-                        textSize={el.name.length > 11 ? "13.5px" : "14px"}
-                     >
-                        {el.icon}
-                        <p>{el.name}</p>
-                     </IconCont>
-                  ))}
+                  })
+                     .sort((a, b) => a.name.localeCompare(b.name))
+                     .map((el, index) => (
+                        <IconCont
+                           key={index}
+                           textSize={el.name.length > 11 ? "13.5px" : "14px"}
+                        >
+                           {el.icon}
+                           <p>{el.name}</p>
+                        </IconCont>
+                     ))}
                </ToolsInfo>
             )}
          </Bottom>
