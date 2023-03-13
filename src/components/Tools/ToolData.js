@@ -34,6 +34,9 @@ import { Sentry } from "@styled-icons/simple-icons/Sentry";
 import { Aws } from "@styled-icons/boxicons-logos/Aws";
 import { Netlify } from "@styled-icons/simple-icons/Netlify";
 import { Adobeindesign } from "@styled-icons/simple-icons/Adobeindesign";
+import { Cloudflare } from "@styled-icons/simple-icons/Cloudflare";
+import { Algolia } from "@styled-icons/boxicons-logos/Algolia";
+import { Git } from "@styled-icons/boxicons-logos/Git";
 
 // if search state is empty return all 3 divs (dev, des, agi) else return 1 for search result
 
@@ -43,6 +46,7 @@ export const ToolData = [
    { type: "dev", name: "React.js", icon: <LogoReact /> },
    { type: "dev", name: "Next.js", icon: <Nextdotjs /> },
    { type: "dev", name: "React Native", icon: <LogoReact /> },
+   { type: "dev", name: "Git", icon: <Git /> },
    { type: "dev", name: "Storybook", icon: <Storybook /> },
    { type: "dev", name: "HTML", icon: <Html5 /> },
    { type: "dev", name: "CSS", icon: <Css3 /> },
@@ -71,10 +75,12 @@ export const ToolData = [
    { type: "agi", name: "Github", icon: <Github /> },
    { type: "agi", name: "Bitbucket", icon: <Bitbucket /> },
    { type: "agi", name: "AWS", icon: <Aws /> },
+   { type: "agi", name: "Cloudflare", icon: <Cloudflare /> },
    { type: "agi", name: "Digital Ocean", icon: <DigitalOcean /> },
    { type: "agi", name: "Vercel", icon: <Vercel /> },
    { type: "agi", name: "Netlify", icon: <Netlify /> },
    { type: "agi", name: "Sentry", icon: <Sentry /> },
+   { type: "agi", name: "Algolia", icon: <Algolia /> },
    { type: "agi", name: "Notion", icon: <Notion /> },
    { type: "agi", name: "Jira", icon: <Jirasoftware /> },
    { type: "agi", name: "Trello", icon: <Trello /> },

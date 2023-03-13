@@ -94,7 +94,6 @@ export default function Contact() {
                         ? "linear-gradient(152.97deg, rgba(28, 76, 121, 0.06) 0%, rgba(255, 255, 255, 0) 100%)"
                         : "#FAF8EB"
                   }
-                  // value=""
                   name="email"
                   required
                   onChange={HandleChange}
