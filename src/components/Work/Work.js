@@ -10,7 +10,7 @@ import WorkDetails from "./WorkDetails";
 
 export default function Work() {
    const { theme } = useTheme();
-   const [current, setCurrent] = useState("scope");
+   const [current, setCurrent] = useState("psg");
 
    return (
       <ContentModal flexDex="row">

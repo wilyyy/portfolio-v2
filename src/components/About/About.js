@@ -69,7 +69,7 @@ export default function About() {
                         tech such as AI and 3D printing. I also love to travel the world
                         for inspiration and to broaden my horizons.
                      </p>
-                     <p>
+                     {/* <p>
                         Open to collaboration on side projects so feel free to{" "}
                         <motion.a
                            href="https://www.linkedin.com/in/william-alvarez-76b806149/"
@@ -81,7 +81,7 @@ export default function About() {
                         <span onClick={() => setStatus("mail")} className="mail_link">
                            send me mail!
                         </span>
-                     </p>
+                     </p> */}
                   </div>
                   <div className="pictureGoHere">
                      {theme === "dark" ? (
@@ -131,17 +131,18 @@ export default function About() {
                   <div className="divider" />
                </Spacer>
                <Credentials asp>
-                  <h2>Career Progression</h2>
+                  <h2>Future Exploration</h2>
                   <div>
                      <p>
                         With a love for software development and other ventures in tech,
-                        here are some concepts I plan to dive deeper into:
+                        here are some concepts I wish to explore in the future:
                      </p>
                      <ul>
                         <li>Test Driven Development</li>
                         <li>More AWS: S3, EC2</li>
-                        <li>Relational Database: PostgreSQL</li>
                         <li>Data Visualization: D3.js</li>
+                        <li>Data Science/Data Driven projects</li>
+                        <li>Relational Database: PostgreSQL</li>
                         <li>DevOps: Docker, Kubernetes</li>
                         <li>Python: Flask/Django, ML Neural Networks</li>
                         <li>Rust</li>
@@ -149,6 +150,10 @@ export default function About() {
                         <li>Angular, Vue, other JS frameworks</li>
                      </ul>
                   </div>
+                  <p>
+                     📖 <b>Current Read:</b> Designing Data Intensive Applications,
+                     <i> Martin Kleppmann</i>
+                  </p>
                </Credentials>
             </Bottom>
          </Right>
@@ -242,11 +247,12 @@ const Spacer = styled.div`
 
 const Credentials = styled.div`
    width: 90%;
-   min-height: 216px;
    display: flex;
    flex-direction: column;
-   /* justify-content: space-between; */
 
+   div {
+      margin-bottom: 40px;
+   }
    p {
       margin: 0;
    }
