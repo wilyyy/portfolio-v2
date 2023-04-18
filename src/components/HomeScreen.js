@@ -47,10 +47,6 @@ export default function HomeScreen() {
                <LightSwitch />
             </Column>
          </Main>
-
-         {/* <Footer>
-            <Nav />
-         </Footer> */}
          {theme === "dark" && <BackgroundPatterns />}
       </Home>
    );

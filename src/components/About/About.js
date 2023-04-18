@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import { useStatus } from "@/src/utils/AppProvider";
+import { ScrollToSection } from "./AboutUtils";
 
 import { useTheme } from "@/src/utils/AppProvider";
 import { globalTheme } from "@/src/utils/ThemeConfig";
@@ -25,48 +26,28 @@ export default function About() {
                <motion.h3
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 500 }}
-                  onClick={() =>
-                     windowRef.current.scrollTo({
-                        top: 0,
-                        behavior: "smooth",
-                     })
-                  }
+                  onClick={() => ScrollToSection(windowRef, 0)}
                >
                   About Me
                </motion.h3>
                <motion.h3
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 500 }}
-                  onClick={() =>
-                     windowRef.current.scrollTo({
-                        top: 430,
-                        behavior: "smooth",
-                     })
-                  }
+                  onClick={() => ScrollToSection(windowRef, 430)}
                >
                   Experience
                </motion.h3>
                <motion.h3
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 500 }}
-                  onClick={() =>
-                     windowRef.current.scrollTo({
-                        top: 710,
-                        behavior: "smooth",
-                     })
-                  }
+                  onClick={() => ScrollToSection(windowRef, 710)}
                >
                   Education
                </motion.h3>
                <motion.h3
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 500 }}
-                  onClick={() =>
-                     windowRef.current.scrollTo({
-                        top: 910,
-                        behavior: "smooth",
-                     })
-                  }
+                  onClick={() => ScrollToSection(windowRef, 910)}
                >
                   Progression
                </motion.h3>
@@ -84,13 +65,12 @@ export default function About() {
                         a strong background in design.
                      </p>
                      <p>
-                        I like to talk about about cognitive & social psychology, fashion,
-                        esports, and emerging tech such as AI and 3D printing. Lost in
-                        wanderlust, I also love to travel the world for inspiration and to
-                        broaden my horizons.
+                        I like to talk about psychology, fashion, esports, and emerging
+                        tech such as AI and 3D printing. I also love to travel the world
+                        for inspiration and to broaden my horizons.
                      </p>
                      <p>
-                        Open to collaboration on side projects so feel free to{" "}
+                        Open to collaboration on fun side projects so feel free to{" "}
                         <motion.a
                            href="https://www.linkedin.com/in/william-alvarez-76b806149/"
                            target="_blank"
@@ -151,32 +131,29 @@ export default function About() {
                   <div className="divider" />
                </Spacer>
                <Credentials asp>
-                  <h2>Progression</h2>
+                  <h2>Future Exploration</h2>
                   <div>
                      <p>
-                        With a love for diving deeper into software development and other
-                        ventures in tech, here are some technologies I want to explore in
-                        the future:
+                        With a love for software development and other ventures in tech,
+                        here are some concepts I wish to explore in the future:
                      </p>
                      <ul>
-                        <li>Further mastery of Express and MongoDB</li>
-                        <li>AWS EC2 and AWS Lambda</li>
-                        <li>Python into Flask or Django</li>
-                        <li>Redux</li>
-                        <li>D3.js or other data visualization tools</li>
-                        <li>PostgreSQL</li>
-                        <li>Prisma</li>
-                        <li>Docker</li>
+                        <li>Test Driven Development</li>
+                        <li>Further mastery of design patterns & software design</li>
+                        <li>More AWS: S3, EC2</li>
+                        <li>Data Visualization: D3.js</li>
+                        <li>Data Science/Data Driven projects</li>
+                        <li>Relational Database: PostgreSQL</li>
+                        <li>DevOps: Docker, Kubernetes</li>
+                        <li>Python: Flask/Django, ML Neural Networks</li>
                         <li>Rust</li>
                         <li>GO</li>
-                        <li>Kubernetes</li>
-                        <li>Unity & VR/AR tech</li>
                         <li>Angular, Vue, other JS frameworks</li>
                      </ul>
                   </div>
                   <p>
-                     📖 <b>Currently Reading:</b> Head First Design Patterns by Eric
-                     Freeman
+                     📖 <b>Current Read:</b> Designing Data Intensive Applications,
+                     <i> Martin Kleppmann</i>
                   </p>
                </Credentials>
             </Bottom>
@@ -271,11 +248,12 @@ const Spacer = styled.div`
 
 const Credentials = styled.div`
    width: 90%;
-   height: 216px;
    display: flex;
    flex-direction: column;
-   justify-content: space-between;
 
+   div {
+      margin-bottom: 40px;
+   }
    p {
       margin: 0;
    }

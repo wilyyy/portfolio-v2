@@ -1,3 +1,5 @@
+// make this mobile first
+
 export const MediaQuery = {
    // screenDesktop: "(min-width: 1440px)",
 
@@ -6,5 +8,3 @@ export const MediaQuery = {
 
    screenMobile: "(max-width: 833px)",
 };
-
-//look for a way to do a mixin https://dev.to/danielyuschick/logical-css-with-simple-styled-components-mixins-21i8
