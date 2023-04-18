@@ -69,8 +69,8 @@ export default function About() {
                         tech such as AI and 3D printing. I also love to travel the world
                         for inspiration and to broaden my horizons.
                      </p>
-                     {/* <p>
-                        Open to collaboration on side projects so feel free to{" "}
+                     <p>
+                        Open to collaboration on fun side projects so feel free to{" "}
                         <motion.a
                            href="https://www.linkedin.com/in/william-alvarez-76b806149/"
                            target="_blank"
@@ -81,7 +81,7 @@ export default function About() {
                         <span onClick={() => setStatus("mail")} className="mail_link">
                            send me mail!
                         </span>
-                     </p> */}
+                     </p>
                   </div>
                   <div className="pictureGoHere">
                      {theme === "dark" ? (
@@ -139,6 +139,7 @@ export default function About() {
                      </p>
                      <ul>
                         <li>Test Driven Development</li>
+                        <li>Further mastery of design patterns & software design</li>
                         <li>More AWS: S3, EC2</li>
                         <li>Data Visualization: D3.js</li>
                         <li>Data Science/Data Driven projects</li>

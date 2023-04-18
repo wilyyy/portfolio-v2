@@ -5,7 +5,7 @@ export const WorkData = [
       role: "Web Developer",
       bio: (
          <>
-            <p>psg</p>
+            <p>Coming soon...</p>
          </>
       ),
       tools: "Next.js, Contentful, Netlify, Bazaarvoice, Algolia, Cloudflare",
@@ -13,11 +13,11 @@ export const WorkData = [
    },
    {
       status: "photo",
-      name: "photo gallery",
+      name: "Photo Gallery",
       role: "Fullstack",
       bio: (
          <>
-            <p>i like to walk & take pictures with the bois.</p>
+            <p>Coming soon...</p>
          </>
       ),
       tools: "Next.js, Express, MongoDB, AWS S3, Cloudflare",
