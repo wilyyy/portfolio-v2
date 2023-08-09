@@ -1,42 +1,19 @@
-some 4fun house cleaning
+# Portfolio 2022 - On Hold
 
-About.js too verbose in code syntax and page copy, clean up
-want to get rid of baffle-react package b/c its boomer package, recreate in house 🧠
-    import React, { useState, useEffect } from 'react';
+**Purpose**
 
-const Obfuscate = ({ message }) => {
-  const [obfuscatedMessage, setObfuscatedMessage] = useState('');
+My inaugural post-graduation portfolio. In this project, I set out to create a portfolio that breaks away from the norm while still prioritizing a seamless user experience. Inspired by standout designs on platforms like Awwwards, I sought a blend of innovative design while not taking away from usability.
 
-  useEffect(() => {
-    let obfuscated = '';
-    for (let i = 0; i < message.length; i++) {
-      const charCode = message.charCodeAt(i);
-      if (charCode >= 65 && charCode <= 90) {
-        obfuscated += String.fromCharCode(65 + Math.floor(Math.random() * 26));
-      } else if (charCode >= 97 && charCode <= 122) {
-        obfuscated += String.fromCharCode(97 + Math.floor(Math.random() * 26));
-      } else {
-        obfuscated += message.charAt(i);
-      }
-    }
-    setObfuscatedMessage(obfuscated);
-  }, [message]);
+During the research phase, I drew inspiration from the desktop UIs of Ubuntu and Mac OS, integrating familiar elements to ensure a comfortable user interface. I aimed to showcase innovative design and practicality, reflecting my passion for both aesthetics and user-centric development.
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      alert(message);
-    }, 3000);
-    return () => clearTimeout(timer);
-  }, [obfuscatedMessage]);
+**Built using**
 
-  return <div>{obfuscatedMessage}</div>;
-};
+- Next.js
+- Figma (UI Design)
+- Adobe Illustrator (Asset Creation)
 
-export default Obfuscate;
-
-add photos to projects, maybe use google cloud storage or azure blob to store images, faster load
-consider switching to CSS grid for large and x-large screen sizes
-finally get mobile finished
-accesibility
-some icons don't fit usability heuristics (gear icon is cognitively associated with a 'settings' functionality instead of a 'list of tools'
-investigate SEO
+**Possible Improvements**
+- Currently not mobile responsive
+    - The idea was to integrate a mobile design resembling an iPhone home screen
+- Review current icons to minimize cognitive effort
+    - Gear icon resembling tools is usually associated with 'settings' features 
